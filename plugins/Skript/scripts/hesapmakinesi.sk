@@ -1,0 +1,92 @@
+options:
+	p: &aMC&8-&cT&fR
+	sure: 15 # kç dakikada 1 çıkacağını yazınız.
+	odul: 57 # ödül olarak gelicek bloğun id'sini yazınız.
+	oduladet: 16 # ödülün adetini giriniz.
+	odulismi: &f&lÖdül
+	odulenchant: unbreaking 1 # büyü isimlerinin ingilizcesini yazıp 1 boşluk bırakın ve seviyesini yazın.
+	titlesure: 20 # işlemlerin ekranda kaç saniye kalacağını yazın.
+	
+command /oyun:
+	permission: sk.oyun
+	permission message: {@p} &8» &7Yetkin yok.
+	trigger:
+		set {hps::oyun} to true
+		add "-" and "+" and "*" and "sayili" and "harfli" and "karisik" to {_cikacaklar::*}
+		set {_bs} to 0.4 ticks
+		loop 20 times:
+			set {_islem} to random element of {_cikacaklar::*}
+			send all players title "{@p}" with subtitle "&6&l%{_islem}%"
+			wait {_bs}
+			set {_ls} to "%loop-number%" parsed as integer
+			if {_ls} is greater than 6:
+				add 0.3 ticks to {_bs}
+		wait 2.5 seconds
+		set {_r1} to random integer between 1 and 150
+		set {_r2} to random integer between 1 and 150
+		if {_islem} is "*":
+			set {_r1} to random integer between 1 and 20
+			set {_r2} to random integer between 1 and 20
+			set {hps::sonuc} to {_r1} * {_r2}
+			send all players title "{@p}" with subtitle "&e%{_r1}% &cx &e%{_r2}% &f= ?" for {@titlesure} seconds
+		if {_islem} is "+":
+			set {hps::sonuc} to {_r1} + {_r2}
+			send all players title "{@p}" with subtitle "&e%{_r1}% &c+ &e%{_r2}% &f= ?" for {@titlesure} seconds
+		if {_islem} is "-":
+			set {hps::sonuc} to {_r1} - {_r2}
+			send all players title "{@p}" with subtitle "&e%{_r1}% &c- &e%{_r2}% &f= ?" for {@titlesure} seconds
+		if {_islem} is "sayili":
+			set {hps::sonuc} to random integer between 1 and 9999999999999
+			send all players title "{@p}" with subtitle "&c%{hps::sonuc}%" for {@titlesure} seconds
+		if {_islem} is "harfli":
+			set {hps::sonuc} to "%random letter%%random letter%%random letter%%random letter%%random letter%%random letter%%random letter%%random letter%%random letter%%random letter%%random letter%%random letter%%random letter%"
+			send all players title "{@p}" with subtitle "&c%{hps::sonuc}%" for {@titlesure} seconds
+		if {_islem} is "karisik":
+			set {hps::sonuc} to "%random integer between 1 and 99%%random letter%%random letter%%random letter%%random letter%%random letter%%random letter%%random integer between 1 and 99%%random letter%%random letter%%random letter%%random letter%%random integer between 1 and 99%"
+			send all players title "{@p}" with subtitle "&c%{hps::sonuc}%" for {@titlesure} seconds
+on chat:
+	if message is "%{hps::sonuc}%":
+		if {hps::oyun} is true:
+			send all players title "{@p}" with subtitle "&a%player% &2Kazandı."
+			delete {hps::*}
+			give {@oduladet} {@odul} of {@odulenchant} named "{@odulismi}" to player
+every {@sure} minutes:
+	execute console command "oyun"
+command /hesapmakinesi [<int>] [<text>] [<int>]:
+	aliases: /hp , /hesapm , /hmakinesi , /hmakine , /hesapmakine
+	permission: hesap.oyuncu
+	permission message: {@p} &8» &7Yetkin yok.
+	trigger:
+		if {hps::oyun} isn't set:
+			if arg 1 is set:
+				if arg 2 is set:
+					if arg 3 is set:
+						if arg 2 is "+":
+							set {_cvp} to arg-1 + arg-3
+							send player title "{@p}" with subtitle "&e%arg-1% &c+ &e%arg 3% &f= &c%{_cvp}%" for 4 seconds
+						else if arg 2 is "-":
+							set {_cvp} to arg 1 - arg 3
+							send player title "{@p}" with subtitle "&e%arg-1% &c- &e%arg 3% &f= &c%{_cvp}%" for 4 seconds
+						else if arg 2 is "x" or "." or "*":
+							set {_cvp} to arg-1 * arg-3
+							send player title "{@p}" with subtitle "&e%arg-1% &cx &e%arg 3% &f= &c%{_cvp}%" for 4 seconds
+						else if arg 2 is ":" or "/" or "\" or "|":
+							set {_cvp} to arg-1 / arg-3
+							send player title "{@p}" with subtitle "&e%arg-1% &c| &e%arg 3% &f= &c%{_cvp}%" for 4 seconds
+						else:
+							invoke "kullanim-hp" from player
+					else:
+						invoke "kullanim-hp" from player
+				else:
+					invoke "kullanim-hp" from player
+			else:
+				invoke "kullanim-hp" from player
+		else:
+			send "{@p} Oyun sürerken hesap makinesi kullanmak yasaktır !"
+sub "kullanim-hp":
+	send "&f&l&m---------------&e&l Hesap Makinesi &f&l&m---------------" to parameter-1
+	send "&fToplama için &e/HesapMakinesi ? + ?" to parameter-1
+	send "&fÇıkartma için &e/HesapMakinesi ? - ?" to parameter-1
+	send "&fÇarpma için &e/HesapMakinesi ? x ?" to parameter-1
+	send "&fBölme için &e/HesapMakinesi ? : ?" to parameter-1
+	send "&f&l&m---------------&e&l Hesap Makinesi &f&l&m---------------" to parameter-1

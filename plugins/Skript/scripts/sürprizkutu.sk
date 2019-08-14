@@ -1,0 +1,63 @@
+﻿options:
+	p: &aMC&8-&cT&fR &8»
+	noperm: &aMC&8-&cT&fR &8» &cBu komutu kullanabilmek için yeterli yetkin yok!	
+on login:
+	delete {suprızkutu::%player%}
+on rightclick with a chest:
+	if tool's display name is "&bSüpriz Kutu":
+		cancel event
+		if {suprızkutu::%player%} is not set:
+			set {suprızkutu::%player%} to player
+			remove 1 chest named  "&bSüpriz Kutu" from player
+			set action bar of player to "&cSandık Açılıyor..."
+			send player title "&eSandık Açılıyor..." with subtitle "&a█&c███" for 1 seconds
+			wait 1 second
+			set action bar of player to "&cSandık Açılıyor..."
+			send player title "&eSandık Açılıyor..." with subtitle "&a██&c██" for 1 seconds
+			wait 1 second
+			set action bar of player to "&cSandık Açılıyor..."
+			send player title "&eSandık Açılıyor..." with subtitle "&a███&c█" for 1 seconds
+			wait 1 second
+			set action bar of player to "&aSandık Açıldı!"
+			send player title "&eSandık Açıldı..." with subtitle "&a████" for 1 seconds
+			wait 1 second
+			delete {suprızkutu::%player%}
+			set {kutu} to a random integer between 1 and 9
+			if {kutu} is 1:
+				add 1000 to player's balance
+				send player title "&eÖdülün" with subtitle "&b1000TL" for 2 seconds
+				set action bar of player to "&6Tebrikler!"
+			if {kutu} is 2:
+				add 5000 to player's balance
+				send player title "&eÖdülün" with subtitle "&b5000TL" for 2 seconds
+				set action bar of player to "&6Tebrikler!"
+			if {kutu} is 3:
+				give 64 lapis to player
+				send player title "&eÖdülün" with subtitle "&f64 &9Lapis" for 2 seconds
+				set action bar of player to "&6Tebrikler!"
+			if {kutu} is 6:
+				give 64 iron ingot to player
+				send player title "&eÖdülün" with subtitle "&f64 &7Demir" for 2 seconds
+				set action bar of player to "&6Tebrikler!"
+			if {kutu} is 7:
+				give 64 gold ingot to player
+				send player title "&eÖdülün" with subtitle "&f64 &6Altın" for 2 seconds
+				set action bar of player to "&6Tebrikler!"
+			if {kutu} is 5:
+				give 64 diamond to player
+				send player title "&eÖdülün" with subtitle "&f64 &bElmas" for 2 seconds
+				set action bar of player to "&6Tebrikler!"
+			if {kutu} is 8:
+				give 64 emerald to player
+				send player title "&eÖdülün" with subtitle "&f64 &aZümrüt" for 2 seconds
+				set action bar of player to "&6Tebrikler!"
+			if {kutu} is 9:
+				send player title "&eÖdülün" with subtitle "&4&lBoş :(" for 2 seconds
+				set action bar of player to "&4&oŞansına küs hiçbir şey çıkmadı :("
+command /herkesesüprizkutu:
+	trigger:
+		if player is op:
+			give 1 chest named "&bSüpriz Kutu" to players
+			send "{@p} &eYetkili %player's display name% &etarafından herkese &a1 &eadet Süpriz kutu verildi." to players
+		else:
+			send "{@noperm}"

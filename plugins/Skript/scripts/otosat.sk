@@ -1,0 +1,34 @@
+options:
+	p: &aMC&8-&cT&fR &8»
+	otolapisfiyat: 1500
+	otolapisadet: 64
+on quit:
+	set {otosatlapis::%player%} to false
+on join:
+	while player is online:
+		wait 1 second
+		if {otosatlapis::%player%} is true:
+			if player has {@otolapisadet} lapis:
+				remove {@otolapisadet} lapis from player's inventory
+				send "{@p} &f{@otolapisadet} &7adet &3lapis &f{@otolapisfiyat} TL&7'ye &7satılmıştır." to player
+				add {@otolapisfiyat} to player's money
+command /otosatayar [<Text>]:
+	trigger:
+		if arg 1 is set:
+			if arg 1 is "lapis":
+				if {otosatlapis::%player%} is false:
+					send "{@p} &7Oto lapis satma &aaktif" to player
+					set {otosatlapis::%player%} to true
+				else:
+					send "{@p} &7Oto lapis satma &cdevredışı" to player
+					set {otosatlapis::%player%} to false
+command /otosat [<Text>]:
+	trigger:
+		if arg 1 is not set:
+			open virtual chest with size 1 named "&6&lOTOSAT" to player
+			wait 1 tick
+			make gui slot 0 of player with lapis named "&9Lapis" with lore "" to nothing
+			if {otosatlapis::%player%} is false:
+				make gui slot 8 of player with gray dye named "&9Lapis" with lore "&7Durum: &cKapalı||&7Açmak için tıklayın." to close then run player command "otosatayar lapis"
+			else:
+				make gui slot 8 of player with light green dye named "&9Lapis" with lore "&7Durum: &aAçık||&7Kapatmak için tıklayın." to close then run player command "otosatayar lapis"

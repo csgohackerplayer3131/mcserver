@@ -1,0 +1,175 @@
+options:
+	p: &6BitCoin &8»&f # &8» işareti ile sonraki renk kodu arasında boşluk bırakma!
+	degismesaati: 3
+aliases:
+	bitcoinmenuesyasi = 266 # buraya bitcoinin menüdeki itemini girin
+command /bitcoin [<text>] [<int>] [<int>]:
+	trigger:
+		if arg-1 isn't set:
+			invoke "bitcoin-menu" from player
+		if arg-1 is "al":
+			if player's balance is greater than or equal to {bitcoin::bcpara}:
+				remove {bitcoin::bcpara} from player's balance
+				add 1 to {bitcoinbakiye::%player%}
+				if player's balance is greater than or equal to {bitcoin::bcpara}:
+					set slot 4 of player's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%player%}%||&fDurum;||&fBitCoin &aAlınabilir!||&fBitCoin &cSatılamaz!"
+					set slot 0 of player's current inventory to bitcoinmenuesyasi of unbreaking 1 named "{@p} Satın Al" with lore "&a%{bitcoin::bcpara}%&eTL"
+					if {bitcoinbakiye::%player%} is bigger than or equal to 1:
+						set slot 4 of player's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%player%}%||&fDurum;||&fBitCoin &aAlınabilir!||&fBitCoin &aSatılabilir!"
+						set slot 8 of player's current inventory to bitcoinmenuesyasi of unbreaking 1 named "{@p} Satış Yap" with lore "&a%{bitcoin::bcpara}%&eTL"
+					else:
+						set slot 4 of player's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%player%}%||&fDurum;||&fBitCoin &aAlınabilir!||&fBitCoin &cSatılamaz!"
+						set slot 8 of player's current inventory to bitcoinmenuesyasi named "{@p} Satış Yap" with lore "&a%{bitcoin::bcpara}%&eTL"
+				else:
+					set slot 4 of player's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%player%}%||&fDurum;||&fBitCoin &cAlınamaz!||&fBitCoin &aSatılabilir!"
+					set slot 0 of player's current inventory to bitcoinmenuesyasi named "{@p} Satın Al" with lore "&a%{bitcoin::bcpara}%&eTL"
+					if {bitcoinbakiye::%player%} is smaller than 1:
+						set slot 4 of player's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%player%}%||&fDurum;||&fBitCoin &cAlınamaz!||&fBitCoin &cSatılamaz!"
+						set slot 8 of player's current inventory to bitcoinmenuesyasi named "{@p} Satış Yap" with lore "&a%{bitcoin::bcpara}%&eTL"
+				send "{@p} Hesabınızdan %{bitcoin::bcpara}% kesilerek 1 adet BitCoin satın aldınız, şuanda sizde %{bitcoinbakiye::%player%}% BitCoin var!"
+			else:
+				send "{@p} &cÜzgünüm, BitCoin almak için yeterli paraya sahip değilsiniz. daha %({bitcoin::bcpara} - player's money)%TL'ye ihtiyacın var!"
+				close player's inventory
+		else if arg-1 is "sat":
+			if {bitcoinbakiye::%player%} is bigger than or equal to 1:
+				remove 1 from {bitcoinbakiye::%player%}
+				add {bitcoin::bcpara} to player's balance
+				if player's balance is greater than or equal to {bitcoin::bcpara}:
+					set slot 4 of player's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%player%}%||&fDurum;||&fBitCoin &aAlınabilir!||&fBitCoin &cSatılamaz!"
+					set slot 0 of player's current inventory to bitcoinmenuesyasi of unbreaking 1 named "{@p} Satın Al" with lore "&a%{bitcoin::bcpara}%&eTL"
+					if {bitcoinbakiye::%player%} is bigger than or equal to 1:
+						set slot 4 of player's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%player%}%||&fDurum;||&fBitCoin &aAlınabilir!||&fBitCoin &aSatılabilir!"
+						set slot 8 of player's current inventory to bitcoinmenuesyasi of unbreaking 1 named "{@p} Satış Yap" with lore "&a%{bitcoin::bcpara}%&eTL"
+					else:
+						set slot 4 of player's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%player%}%||&fDurum;||&fBitCoin &aAlınabilir!||&fBitCoin &cSatılamaz!"
+						set slot 8 of player's current inventory to bitcoinmenuesyasi named "{@p} Satış Yap" with lore "&a%{bitcoin::bcpara}%&eTL"
+				else:
+					set slot 4 of player's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%player%}%||&fDurum;||&fBitCoin &cAlınamaz!||&fBitCoin &aSatılabilir!"
+					set slot 0 of player's current inventory to bitcoinmenuesyasi named "{@p} Satın Al" with lore "&a%{bitcoin::bcpara}%&eTL"
+					if {bitcoinbakiye::%player%} is smaller than 1:
+						set slot 4 of player's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%player%}%||&fDurum;||&fBitCoin &cAlınamaz!||&fBitCoin &cSatılamaz!"
+						set slot 8 of player's current inventory to bitcoinmenuesyasi named "{@p} Satış Yap" with lore "&a%{bitcoin::bcpara}%&eTL"
+				send "{@p} 1 adet BitCoin sattın ve %{bitcoin::bcpara}% kazandın, hesabında şuan %{bitcoinbakiye::%player%}% BitCoin kaldı."
+			else:
+				send "{@p} &cBitCoin satmak için en az 1 adet BitCoinin olması gerekiyor."
+				close player's inventory
+		else if arg-1 is "değer" or "deger":
+			if player has the permission "sk.admin":
+				if arg-2 is set:
+					set {bitcoin::bcpara} to arg-2
+					send "{@p} BitCoin borsa değeri %arg-2% olarak ayarlandı."
+					delete holo object "bitcoin"
+					create holo object "&8&l&m----------------------------;{@p} Borsa Değeri » &a%{bitcoin::bcpara}%&eTL;{@p} Değerin değişmesine » &e%{bitcoin::bcsaat}%&asaat &e%{bitcoin::bcdakika}%&adakika &fkaldı;&b&oTıkla&b &ove&b &oBitCoin&b &omenüsünü&b &oaç!;&8&l&m----------------------------" with id "bitcoin" at {bitcoin::bclocation}
+				else:
+					send "{@p} Kullanım » /BitCoin değer <değer>"
+			else:
+				send "{@p} &cÜzgünüm, bu komutu kullanmak için gerekli yetkiye sahip değilsiniz."
+		else if arg-1 is "holo" or "hologram":
+			if player has the permission "sk.admin":
+				delete holo object "bitcoin"
+				create holo object "&8&l&m----------------------------;{@p} Borsa Değeri » &a%{bitcoin::bcpara}%&eTL;{@p} Değerin değişmesine » &e%{bitcoin::bcsaat}%&asaat &e%{bitcoin::bcdakika}%&adakika &fkaldı;&b&oTıkla&b &ove&b &oBitCoin&b &omenüsünü&b &oaç!;&8&l&m----------------------------" with id "bitcoin" at player's location
+				set {bitcoin::bclocation} to player's location
+				set {bitcoin::bcsaat} to {@degismesaati} - 1
+				set {bitcoin::bcdakika} to 59
+				send "{@p} Hologram oluşturuldu, önceki hologram (varsa) silindi." to player
+				send "{@p} Lütfen hologramın çalışması için skripte relaod atın." to player
+			else:
+				send "{@p} &cÜzgünüm, bu komutu kullanmak için gerekli yetkiye sahip değilsiniz."
+		else if arg-1 is "holosil" or "hologramsil":
+			if player has the permission "sk.admin":
+				delete holo object "bitcoin"
+				delete {bitcoin::bclocation}
+				delete {bitcoin::bcsaat}
+				delete {bitcoin::bcdakika}
+				send "{@p} Hologram silindi." to player
+				send "{@p} Lütfen hologramın çalışmaması için skripte relaod atın." to player
+			else:
+				send "{@p} &cÜzgünüm, bu komutu kullanmak için gerekli yetkiye sahip değilsiniz."
+		else if arg-1 is "sure" or "süre":
+			if player has the permission "sk.admin":
+				if arg-2 is set:
+					if arg-3 is set:
+						set {bitcoin::bcsaat} to arg-2
+						set {bitcoin::bcdakika} to arg-3
+						broadcast "{@p} Yetkili %player% BitCoin değerinin değişme süresini %arg-2%:%arg-3% olarak ayarladı."
+						delete holo object "bitcoin"
+						create holo object "&8&l&m----------------------------;{@p} Borsa Değeri » &a%{bitcoin::bcpara}%&eTL;{@p} Değerin değişmesine » &e%{bitcoin::bcsaat}%&asaat &e%{bitcoin::bcdakika}%&adakika &fkaldı;&b&oTıkla&b &ove&b &oBitCoin&b &omenüsünü&b &oaç!;&8&l&m----------------------------" with id "bitcoin" at {bitcoin::bclocation}
+					else:
+						send "{@p} Kullanım » /BitCoin süre <saat> <dakika>"
+				else:
+					send "{@p} Kullanım » /BitCoin süre <saat> <dakika>"
+			else:
+				send "{@p} &cÜzgünüm, bu komutu kullanmak için gerekli yetkiye sahip değilsiniz."
+		else:
+			invoke "bitcoin-menu" from player
+on load:
+	set {bitcoin::bcpara} to random integer between 1 and 15
+	broadcast "{@p} BitCoin değeri skript yüklendiği için otomatik olarak yeniden ayarlandı"
+	broadcast "{@p} Borsa değeri » &c%{bitcoin::bcpara}%"
+	invoke "ypmc"
+	
+	if {bitcoin::bclocation} is set:
+		delete holo object "bitcoin"
+		create holo object "&8&l&m----------------------------;{@p} Borsa Değeri » &a%{bitcoin::bcpara}%&eTL;{@p} Değerin değişmesine » &e%{bitcoin::bcsaat}%&asaat &e%{bitcoin::bcdakika}%&adakika &fkaldı;&b&oTıkla&b &ove&b &oBitCoin&b &omenüsünü&b &oaç!;&8&l&m----------------------------" with id "bitcoin" at {bitcoin::bclocation}
+		set {bitcoin::bcsaat} to {@degismesaati} - 1
+		set {bitcoin::bcdakika} to 59
+		while {bitcoin::bcsaat} is bigger than -1:
+			if {bitcoin::bclocation} is set:
+				remove 1 from {bitcoin::bcdakika}
+				delete holo object "bitcoin"
+				create holo object "&8&l&m----------------------------;{@p} Borsa Değeri » &a%{bitcoin::bcpara}%&eTL;{@p} Değerin değişmesine » &e%{bitcoin::bcsaat}%&asaat &e%{bitcoin::bcdakika}%&adakika &fkaldı;&b&oTıkla&b &ove&b &oBitCoin&b &omenüsünü&b &oaç!;&8&l&m----------------------------" with id "bitcoin" at {bitcoin::bclocation}
+				if {bitcoin::bcdakika} is smaller than or equal to 0:
+					remove 1 from {bitcoin::bcsaat}
+					set {bitcoin::bcdakika} to 59
+					delete holo object "bitcoin"
+					create holo object "&8&l&m----------------------------;{@p} Borsa Değeri » &a%{bitcoin::bcpara}%&eTL;{@p} Değerin değişmesine » &e%{bitcoin::bcsaat}%&asaat &e%{bitcoin::bcdakika}%&adakika &fkaldı;&b&oTıkla&b &ove&b &oBitCoin&b &omenüsünü&b &oaç!;&8&l&m----------------------------" with id "bitcoin" at {bitcoin::bclocation}
+					if {bitcoin::bcsaat} is -1:
+						set {bitcoin::bcsaat} to {@degismesaati} - 1
+						set {bitcoin::bcdakika} to 59
+						set {bitcoin::bcpara} to random integer between 1 and 15
+						broadcast "{@p} BitCoin değeri otomatik olarak yeniden ayarlandı"
+						broadcast "{@p} Borsa değeri » &c%{bitcoin::bcpara}%"
+						invoke "ypmc"
+						send "{@p} %{bitcoin::bcypmc}%" to console
+						delete holo object "bitcoin"
+						create holo object "&8&l&m----------------------------;{@p} Borsa Değeri » &a%{bitcoin::bcpara}%&eTL;{@p} Değerin değişmesine » &e%{bitcoin::bcsaat}%&asaat &e%{bitcoin::bcdakika}%&adakika &fkaldı;&b&oTıkla&b &ove&b &oBitCoin&b &omenüsünü&b &oaç!;&8&l&m----------------------------" with id "bitcoin" at {bitcoin::bclocation}
+			wait 1 minute
+on hologram click:
+	if event-string is "bitcoin":
+		invoke "bitcoin-menu" from player
+sub "ypmc":
+	set {bitcoin::ok} to 1
+	if {bitcoin::bcypmc} isn't set:
+		set {bitcoin::bcypmc} to "UsainSrht'nin MC-TR için yaptığı skripti kullandığınız için teşekkürler."
+	else:
+		if {bitcoin::bcypmc} contains "UsainSrht" and "MC-TR":
+			delete {bitcoin::ok}
+		while {bitcoin::ok} is set:
+			send "&c&lHATA! &fSkriptte eksik satır bulundu. Skriptin kodlarını sıfırlayın." to console
+			wait 1 seconds
+sub "bitcoin-menu":
+	open virtual chest with size 1 named "&6&lBitCoin" to parameter-1
+	if parameter-1's balance is bigger than or equal to {bitcoin::bcpara}:
+		format gui slot 0 of parameter-1 with bitcoinmenuesyasi of unbreaking 1 named "{@p} Satın Al" with lore "&a%{bitcoin::bcpara}%&eTL" to run parameter-1 command "/bitcoin al"
+	if parameter-1's balance is smaller than {bitcoin::bcpara}:
+		format gui slot 0 of parameter-1 with bitcoinmenuesyasi named "{@p} Satın Al" with lore "&a%{bitcoin::bcpara}%&eTL" to run parameter-1 command "/bitcoin al"
+	format gui slot 4 of parameter-1 with compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%parameter-1%}%" to nothing
+	if {bitcoinbakiye::%parameter-1%} is bigger than or equal to 1:
+		format gui slot 8 of parameter-1 with bitcoinmenuesyasi of unbreaking 1 named "{@p} Satış Yap" with lore "&a%{bitcoin::bcpara}%&eTL" to run parameter-1 command "/bitcoin sat"
+	if {bitcoinbakiye::%parameter-1%} is smaller than 1:
+		format gui slot 8 of parameter-1 with bitcoinmenuesyasi named "{@p} Satış Yap" with lore "&a%{bitcoin::bcpara}%&eTL" to run parameter-1 command "/bitcoin sat"
+	if parameter-1's balance is greater than or equal to {bitcoin::bcpara}:
+		set slot 4 of parameter-1's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%parameter-1%}%||&fDurum;||&fBitCoin &aAlınabilir!||&fBitCoin &cSatılamaz!"
+		set slot 0 of parameter-1's current inventory to bitcoinmenuesyasi of unbreaking 1 named "{@p} Satın Al" with lore "&a%{bitcoin::bcpara}%&eTL"
+		if {bitcoinbakiye::%parameter-1%} is bigger than or equal to 1:
+			set slot 4 of parameter-1's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%parameter-1%}%||&fDurum;||&fBitCoin &aAlınabilir!||&fBitCoin &aSatılabilir!"
+			set slot 8 of parameter-1's current inventory to bitcoinmenuesyasi of unbreaking 1 named "{@p} Satış Yap" with lore "&a%{bitcoin::bcpara}%&eTL"
+		else:
+			set slot 4 of parameter-1's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%parameter-1%}%||&fDurum;||&fBitCoin &aAlınabilir!||&fBitCoin &cSatılamaz!"
+			set slot 8 of parameter-1's current inventory to bitcoinmenuesyasi named "{@p} Satış Yap" with lore "&a%{bitcoin::bcpara}%&eTL"
+	if parameter-1's balance is smaller than {bitcoin::bcpara}:
+		set slot 4 of parameter-1's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%parameter-1%}%||&fDurum;||&fBitCoin &cAlınamaz!||&fBitCoin &aSatılabilir!"
+		set slot 0 of parameter-1's current inventory to bitcoinmenuesyasi named "{@p} Satın Al" with lore "&a%{bitcoin::bcpara}%&eTL"
+		if {bitcoinbakiye::%parameter-1%} is smaller than 1:
+			set slot 4 of parameter-1's current inventory to compass named "{@p} Borsa Değeri" with lore "&a%{bitcoin::bcpara}%&eTL||&fHesabındaki BitCoin;||&a%{bitcoinbakiye::%parameter-1%}%||&fDurum;||&fBitCoin &cAlınamaz!||&fBitCoin &cSatılamaz!"
+			set slot 8 of parameter-1's current inventory to bitcoinmenuesyasi named "{@p} Satış Yap" with lore "&a%{bitcoin::bcpara}%&eTL"

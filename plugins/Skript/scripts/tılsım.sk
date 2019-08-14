@@ -1,0 +1,112 @@
+﻿options:
+	p: &bTılsım &8»
+	HızIksiriFiyat: 25000
+	GucIksiriFiyat: 25000
+	ZiplamaIksiriFiyat: 25000
+	YenilenmeIksiriFiyat: 25000
+	GorunmezlikIksiriFiyat: 25000
+	NefesAlmaIksiriFiyat: 25000
+	AtesDirenciIksırıFiyat: 25000       
+command /tilsimver [<text>]:
+	trigger:
+		if arg 1 is "hiz" or "hız":
+			if player's balance is greater than or equal to {@HızIksiriFiyat}:
+				give a light green dye named "&eHız" to player
+				remove {@HızIksiriFiyat} from player's balance
+				send "{@p} &6{@HızIksiriFiyat}TL'e &7hız tılsımı aldın!"
+			else:
+				send "{@p} &cBakiyen yetersiz!"	
+		if arg 1 is "guc" or "güç":
+			if player's balance is greater than or equal to {@GucIksiriFiyat}:
+				give a magenta dye named "&4Güç" to player
+				remove {@GucIksiriFiyat} from player's balance
+				send "{@p} &6{@GucIksiriFiyat}TL'e &7güç tılsımı satın aldın!"
+			else:
+				send "{@p} &cBakiyen yetersiz!"
+		if arg 1 is "zıplama" or "ziplama":
+			if player's balance is greater than or equal to {@ZiplamaIksiriFiyat}:
+				give a cyan dye named "&bZıplama" to player
+				remove {@ZiplamaIksiriFiyat} from player's balance
+				send "{@p} &6{@ZiplamaIksiriFiyat}TL'e &7zıplama tılsımı satın aldın!"
+			else:
+				send "{@p} &cBakiyen yetersiz!"
+		if arg 1 is "yenilenme":
+			if player's balance is greater than or equal to {@YenilenmeIksiriFiyat}:
+				give a gray dye named "&dYenilenme" to player
+				remove {@YenilenmeIksiriFiyat} from player's balance
+				send "{@p} &6{@YenilenmeIksiriFiyat}TL'e &7yenilenme tılsımı satın aldın!"
+			else:
+				send "{@p} &cBakiyen yetersiz!"
+		if arg 1 is "gorunmezlik" or "görünmezlik":
+			if player's balance is greater than or equal to {@GorunmezlikIksiriFiyat}:
+				give player light gray dye named "&3Görünmezlik"
+				remove {@GorunmezlikIksiriFiyat} from player's balance
+				send "{@p} &6{@GorunmezlikIksiriFiyat}TL'e &7görünmezlik tılsımı satın aldın!"
+			else:
+				send "{@p} &cBakiyen yetersiz!"
+		if arg 1 is "nefesalma":
+			if player's balance is greater than or equal to {@NefesAlmaIksiriFiyat}:
+				give player orange dye named "&6Su Altında Nefes Alma"
+				remove {@NefesAlmaIksiriFiyat} from player's balance
+				send "{@p} &6{@NefesAlmaIksiriFiyat}TL'e &7su altında nefes alma tılsımı satın aldın!"
+			else:
+				send "{@p} &cBakiyen yetersiz!"
+		if arg 1 is "atesdirenci":
+			if player's balance is greater than or equal to {@AtesDirenciIksırıFiyat}:
+				give player light blue dye named "&cAteş direnci"
+				remove {@AtesDirenciIksırıFiyat} from player's balance
+				send "{@p} &6{@AtesDirenciIksırıFiyat}TL'e &7ateş direnci tılsımı satın aldın!"
+			else:
+				send "{@p} &cBakiyen yetersiz!"  
+on rightclick:
+	tool's name is "&eHız":
+		apply speed to the player for 180 seconds
+		remove 1 light green dye named "&eHız" from player
+		send "{@p} &aBaşarıyla hız tılsımını kullandın!"
+	tool's name is "&4Güç":
+		apply potion of strength 2 to player for 180 seconds
+		remove 1 magenta dye named "&4Güç" from player
+		send "{@p} &aBaşarıyla güç tılsımını kullandın!"
+	tool's name is "&bZıplama":
+		apply jump boost to the player for 180 seconds
+		remove 1 cyan dye named "&bZıplama" from player
+		send "{@p} &aBaşarıyla zıplama tılsımını kullandın!"
+	tool's name is "&dYenilenme":
+		apply regeneration to the player for 180 seconds
+		remove gray dye named "&dYenilenme" from player
+		send "{@p} &aBaşarıyla yenilenme tılsımını kullandın!"
+	tool's name is "&3Görünmezlik":
+		apply invisibility 2 to player for 180 second
+		remove light gray dye named "&3Görünmezlik" from player
+		send "{@p} &aBaşarıyla görünmezlik tılsımını kullandın!"
+	tool's name is "&6Su Altında Nefes Alma":
+		apply water breathing to the player for 180 seconds
+		remove orange dye named "&6Su Altında Nefes Alma" from player
+		send "{@p} &aBaşarıyla su altında nefes alma tılsımını kullandın!"
+	tool's name is "&cAteş direnci":
+		apply fire resistance 2 to player for 180 second
+		remove light blue dye named "&cAteş direnci" from player
+		send "{@p} &aBaşarıyla ateş direnci tılsımını kullandın!"
+command /tılsım:
+	trigger:
+		open virtual chest with size 3 named "&c&lTılsım Market" to player
+		wait 1 tick
+		make gui slot 0 and 1 and 2 and 3 and 4 and 5 and 6 and 7 and 8 and 9 and 17 and 19 and 20 and 21 and 22 and 23 and 24 and 25 and 26 and 27 and 28 of player with stained glass pane named "&cTılsım Market" to close
+		make gui slot 1 of player with stained glass pane named "&cTılsım Market" to close
+		make gui slot 10 of player with light green dye named "&eHız tılsımı" with lore "&b15.000" to close then run player command "tilsimver hiz"
+		make gui slot 11 of player with magenta dye named "&4Güç Tılsımı" with lore "&b25.000 TL" to close then run player command "tilsimver guc"
+		make gui slot 12 of player with cyan dye named "&bZıplama Tılsımı" with lore "&b15.000 TL" to close then run player command "tilsimver ziplama"
+		make gui slot 13 of player with gray dye named "&dYenilenme Tılsımı" with lore "&b15.000 TL" to close then run player command "tilsimver yenilenme"
+		make gui slot 14 of player with light gray dye named "&3Görünmezlik Tılsımı" with lore "&b25.000 TL" to close then run player command "tilsimver gorunmezlik"
+		make gui slot 15 of player with orange dye named "&6Su altında nefes alma" with lore "&b25.000 TL" to close then run player command "tilsimver nefesalma"
+		make gui slot 16 of player with light blue dye named "&cAteş direnci" with lore "&b25.000 TL" to close then run player command "tilsimver atesdirenci"
+command /atılsımal:
+	permission: admin.tilsimveral
+	trigger:
+		give player 16 light green dye named "&eHız"
+		give player 16 magenta dye named "&4Güç"
+		give player 16 cyan dye named "&bZıplama"
+		give player 16 gray dye named "&dYenilenme"
+		give player 16 light gray dye named "&3Görünmezlik"
+		give player 16 orange dye named "&6Su Altında Nefes Alma"
+		give player 16 light blue dye named "&cAteş direnci"

@@ -1,0 +1,11 @@
+﻿command /güncelleme:
+	trigger:
+		send "&8&l» &av1.1 &7ile gelen yenilikler:" to player
+		send "&8&l● &7Spigot'a geçildi." to player
+		send "&8&l● &7İstek skripti kaldırıldı." to player
+		send "&8&l● &7ArsadaFly, CoinFlipper, FramePicture, ActionHealth, MythicMobs, UEAntiTab, ChatManagerX eklentileri silindi." to player
+		send "&8&l● &7Hologram sohbet, Bitcoin, Hesap Makinesi, Fawe, ChatControl eklendi." to player
+		send "&8&l● &7SkinsRestorer türkçeleştirildi." to player
+		send "&8&l● &7Tab ve Scoreboard değiştirildi." to player
+		send "&8&l● &7Skriptler yenilendi." to player
+		send "&8&l● &7Lapis gelmeme bugu düzeltildi." to player

@@ -1,0 +1,52 @@
+SR_LINE: '&7&m----------------------------------------'
+PLAYER_HAS_NO_PERMISSION: '&aMC&8-&cT&fR &8&l» &7Yetkin yok!'
+HELP_PLAYER: |2-
+    &8&l» &7Kostüm değiştirme
+      &a/skin set <skin adı> &7-&f Skin değiştirir.
+      &a/skin <skin adı> &7-&f Üstteki komutun kısaltılmış hali.
+      &a/skin clear &7-&f Skini siler.
+HELP_SR: '    &a/sr &7- &fAdmin komutlarını gösterir.'
+NOT_PREMIUM: '&aMC&8-&cT&fR &8&l» &7Böyle bir skin yok.'
+SKIN_COOLDOWN_NEW: '&aMC&8-&cT&fR &8&l» &7Skin değiştirmek için &a%s &7saniye beklemelisin.'
+SKIN_CHANGE_SUCCESS: '&aMC&8-&cT&fR &8&l» &7Skin başarıyla değiştirildi.'
+SKIN_CLEAR_SUCCESS: '&aMC&8-&cT&fR &8&l» &7Skin başarıyla silindi.'
+HELP_ADMIN: |2-
+    &2&lSkinsRestorer &7- &f&lv%ver% &c&lAdmin
+
+     &2/sr config &7- &fhelp page for usefull in game config settings
+      &2/sr set <player> <skin name> &7- &fChanges the skin of a player..
+      &2/sr drop <player> &7- &fDrops player skin data.
+      &2/sr reload &7- &fReloads the config and locale
+      &2/sr props [player] &7- &fDisplays the players actual skin as properties
+ADMIN_SET_SKIN: '&e[&2SkinsRestorer&e] &2You set %player''s skin.'
+NOT_ONLINE: '&e[&2SkinsRestorer&e] &4Error&8: &cPlayer is not online!'
+SKIN_DATA_DROPPED: '&e[&2SkinsRestorer&e] &2Skin data for player %player dropped.'
+RELOAD: '&aMC&8-&cT&fR &8&l» &7Plugin configi yenilendi.'
+HELP_CONFIG: |2-
+    &2&lSkinsRestorer &7- &c&lConfig
+
+     &2/sr joinSkins <true/false> &7- &fToggles the skins on join.
+      &2/sr SkinWithoutPerm <true/false> &7- &fConfigures the DisabledSkins section.
+      &2/sr SkinExpiresAfter <time> &7- &fHow long the a skin is cached.
+      &2/sr skinCooldown <time> &7- &f/skin cooldown in minute(s).
+      &2/sr defaultSkins <true/false/add [skin]> &7- &fConfigures the DefaultSkins section.
+      &2/sr updater <true/false> &7- &fToggles the updater
+SKIN_DISABLED: '&aMC&8-&cT&fR &8&l» &7Bu skin yasaklanmış.'
+ALT_API_FAILED: '&e[&2SkinsRestorer&e] &4Error&8: &cSkin Data API is overloaded, please
+  try again later!'
+NO_SKIN_DATA: '&e[&2SkinsRestorer&e] &4Error&8: &cNo skin data acquired! Does this
+  player have a skin?'
+STATUS_OK: '&e[&2SkinsRestorer&e] &2Mojang API connection successful!'
+GENERIC_ERROR: '&e[&2SkinsRestorer&e] &4Error&8: &cAn error occurred while requesting
+  skin data, please try again later!'
+WAIT_A_MINUTE: '&e[&2SkinsRestorer&e] &4Error&8: &cPlease wait a minute before requesting
+  that skin again. (Rate Limited)'
+NOT_PLAYER: '&e[&2SkinsRestorer&e] &4Error&8: &cYou need to be a player!'
+OUTDATED: "&e[&2SkinsRestorer&e] &4You are running an outdated version of SkinsRestorer!\n\
+  &cPlease update to the latest version on Spigot: \n&ehttps://www.spigotmc.org/resources/skinsrestorer.2124/"
+MENU_OPEN: '&2Opening the skins menu...'
+PLAYERS_ONLY: '&4These commands are only for players!'
+NEXT_PAGE: '&a&l»&7 Next Page&a&l »'
+PREVIOUS_PAGE: '&e&l»&7 Previous Page&e&l «'
+REMOVE_SKIN: '&c&l»&7 Remove Skin&c&l »'
+SELECT_SKIN: '&2Click to select this skin'

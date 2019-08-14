@@ -1,0 +1,724 @@
+Events:
+	On Function:
+		ID: function
+		Patterns:
+			[on] (method|function) %string%{[%-objects%]}
+		Event values:
+			none
+		Cancellable: false
+Conditions:
+	CondFileExists:
+		ID: CondFileExists
+		Patterns:
+			(file|folder) %string% exists
+			(file|folder) %string% (does not|doesn't|is not|isn't) exists
+	CondIsTamed:
+		ID: CondIsTamed
+		Patterns:
+			%entity% is tamed
+			%entity% (is not|isn't) tamed
+Effects:
+	EffAdd:
+		ID: EffAdd
+		Patterns:
+			%string%.Team.addPlayer{%player%}[;]
+	EffAnvil:
+		ID: EffAnvil
+		Patterns:
+			open [(virtual|fake)] anvil (to|for) [the] %player%
+	EffAsOp:
+		ID: EffAsOp
+		Patterns:
+			run %player% (command|cmd) %string% as op
+	EffBungeeConnect:
+		ID: EffBungeeConnect
+		Patterns:
+			BungeeCord.connect{%player%,%string%}[;]
+			bungeecord connect %player% to %string%
+	EffCanSeeFriendlyInvisibles:
+		ID: EffCanSeeFriendlyInvisibles
+		Patterns:
+			%string%.Team.setFriendlyInvisibles{%boolean%}[;]
+	EffCancelled:
+		ID: EffCancelled
+		Patterns:
+			%string%.Inventory.setCommand{%number%,%boolean%}[;]
+	EffCenter:
+		ID: EffCenter
+		Patterns:
+			%string%.Region.setCenter{%location%}[;]
+	EffChange:
+		ID: EffChange
+		Patterns:
+			%string%.Hologram.(change|set){%string%}[;]
+	EffClose:
+		ID: EffClose
+		Patterns:
+			close %player%'s inventory
+	EffClosed:
+		ID: EffClosed
+		Patterns:
+			%string%.Inventory.setClosed{%number%,%boolean%}[;]
+	EffCommand:
+		ID: EffCommand
+		Patterns:
+			%string%.Inventory.setCommand{%number%,%string%}[;]
+	EffDelete:
+		ID: EffDelete
+		Patterns:
+			delete (file|folder) %string%
+			df %string%
+	EffDelete:
+		ID: EffDelete
+		Patterns:
+			%string%.HashMap.delete{}[;]
+	EffDelete:
+		ID: EffDelete
+		Patterns:
+			%string%.Region.delete{}[;]
+	EffDelete:
+		ID: EffDelete
+		Patterns:
+			%string%.Hologram.(delete|remove)[{}][;]
+	EffDestroy:
+		ID: EffDestroy
+		Patterns:
+			%string%.Hologram.(destroy|hide)[{}][;]
+	EffDisplay:
+		ID: EffDisplay
+		Patterns:
+			display %string% on bossbar [with %number% percent [by %number% seconds]] for %player%
+	EffDisplay:
+		ID: EffDisplay
+		Patterns:
+			%string%.Inventory.display{%player%}[;]
+	EffDisplayName:
+		ID: EffDisplayName
+		Patterns:
+			%string%.Objective.setDisplayName{%string%}[;]
+	EffDisplayName:
+		ID: EffDisplayName
+		Patterns:
+			%string%.Team.setDisplayName{%player%}[;]
+	EffDisplaySlot:
+		ID: EffDisplaySlot
+		Patterns:
+			%string%.Objective.setDisplaySlot{%string%}[;]
+	EffDownload:
+		ID: EffDownload
+		Patterns:
+			download [from] %string% to [file] %string%
+	EffExecutor:
+		ID: EffExecutor
+		Patterns:
+			%string%.Inventory.setExecutor{%number%,%string%}[;]
+	EffFakeMaxPlayers:
+		ID: EffFakeMaxPlayers
+		Patterns:
+			(set|change) max number of players to %number%
+	EffFile:
+		ID: EffFile
+		Patterns:
+			create file %string%
+			create folder %string%
+	EffFile:
+		ID: EffFile
+		Patterns:
+			load script from file %string%
+	EffFlight:
+		ID: EffFlight
+		Patterns:
+			(allow|enable) (fly|flight) (for|to) %player%
+			(disallow|disable) (fly|flight) (for|to) %player%
+	EffFolder:
+		ID: EffFolder
+		Patterns:
+			(load|install) script[s] from %string%
+			Skript.(install|load){%string%}[;]
+	EffFolder:
+		ID: EffFolder
+		Patterns:
+			load scripts from folder %string%
+	EffFriendlyFire:
+		ID: EffFriendlyFire
+		Patterns:
+			%string%.Team.setFriendlyFire{%boolean%}[;]
+	EffFunction:
+		ID: EffFunction
+		Patterns:
+			function %string%{[%-objects%]}[;]
+	EffFurnace:
+		ID: EffFurnace
+		Patterns:
+			open [(virtual|fake)] furnace (to|for) [the] %player%
+	EffGarbageCollectors:
+		ID: EffGarbageCollectors
+		Patterns:
+			System.gc{};
+			run g[arbage ]c[ollector[s]]
+	EffHeight:
+		ID: EffHeight
+		Patterns:
+			%string%.Region.setHeight{%number%}[;]
+	EffHeldSlot:
+		ID: EffHeldSlot
+		Patterns:
+			(set|change) slot in %player%'s hand[ bar] to %number%
+	EffHologram:
+		ID: EffHologram
+		Patterns:
+			display hologram %string% at %location% (for|by) %number% [second[s]]
+	EffIcon:
+		ID: EffIcon
+		Patterns:
+			change server icon to image from file %string%
+			change server icon to image from url %string%
+	EffIndividual:
+		ID: EffIndividual
+		Patterns:
+			make %players% see %players%'s prefix as %string%
+			make %players% see %players%'s suffix as %string%
+	EffIngredient:
+		ID: EffIngredient
+		Patterns:
+			%string%.Recipe.(set|register)Ingredient{%number%,%itemtype%}[;]
+	EffItem:
+		ID: EffItem
+		Patterns:
+			%string%.Inventory.setItem{%number%,%itemtype%}[;]
+	EffL:
+		ID: EffL
+		Patterns:
+			%string%.Region.setL{%location%}[;]
+	EffLine:
+		ID: EffLine
+		Patterns:
+			(c[reate]|g[enerate]) l[ine] %string% in %string%
+			w[rite ]f[ile] %string% [to] %string%
+	EffLoad:
+		ID: EffLoad
+		Patterns:
+			load obfuscated file %string% by power %number%
+	EffLore:
+		ID: EffLore
+		Patterns:
+			%string%.Inventory.setLore{%number%,%string%}[;]
+	EffMetrics:
+		ID: EffMetrics
+		Patterns:
+			enable metrics for %string%[,] version %string%
+	EffMotd:
+		ID: EffMotd
+		Patterns:
+			set motd to %string%
+	EffNew:
+		ID: EffNew
+		Patterns:
+			new Inventory %string%[;]
+	EffNew:
+		ID: EffNew
+		Patterns:
+			new HashMap{%string%}[;]
+	EffNew:
+		ID: EffNew
+		Patterns:
+			new Region %string%[;]
+	EffNew:
+		ID: EffNew
+		Patterns:
+			new Recipe %string%[;]
+	EffNew:
+		ID: EffNew
+		Patterns:
+			%string%.Objective.newScore{%string%}[;]
+	EffNew:
+		ID: EffNew
+		Patterns:
+			new Hologram %string%[;]
+	EffNew:
+		ID: EffNew
+		Patterns:
+			new MySQL $%string% $%string% $%number% $%string% $%string% $%string%[;]
+	EffObfuscate:
+		ID: EffObfuscate
+		Patterns:
+			obfuscate file %string% to file %string% with power %number%
+	EffP:
+		ID: EffP
+		Patterns:
+			%string%.Region.setP{%location%}[;]
+	EffPacket:
+		ID: EffPacket
+		Patterns:
+			%players%.sendPacket{[%-objects%]}[;]
+	EffPlugin:
+		ID: EffPlugin
+		Patterns:
+			enable plugin %string%
+			disable plugin %string%
+	EffPlugin:
+		ID: EffPlugin
+		Patterns:
+			enable plugin %string%
+			disable plugin %string%
+	EffPrefix:
+		ID: EffPrefix
+		Patterns:
+			%string%.Team.setPrefix{%player%}[;]
+	EffPushFrom:
+		ID: EffPushFrom
+		Patterns:
+			push %player% from %location%
+	EffPut:
+		ID: EffPut
+		Patterns:
+			%string%.HashMap.put{%object%,%object%}[;]
+	EffRecipes:
+		ID: EffRecipes
+		Patterns:
+			clear all recipes
+	EffRegister:
+		ID: EffRegister
+		Patterns:
+			%string%.Recipe.register{}[;]
+	EffRegister:
+		ID: EffRegister
+		Patterns:
+			new Objective {%string%,%string%}[;]
+	EffRegister:
+		ID: EffRegister
+		Patterns:
+			new Team %string%[;]
+	EffRemove:
+		ID: EffRemove
+		Patterns:
+			remove bossbar from %player%
+	EffRemove:
+		ID: EffRemove
+		Patterns:
+			remove scoreboard from %player%
+	EffRemove:
+		ID: EffRemove
+		Patterns:
+			%string%.Team.removePlayer{%player%}[;]
+	EffRemoveCommand:
+		ID: EffRemoveCommand
+		Patterns:
+			%string%.Inventory.removeCommand{%number%}[;]
+	EffRemoveExecutor:
+		ID: EffRemoveExecutor
+		Patterns:
+			%string%.Inventory.removeExecutor{%number%}[;]
+	EffRemoveItem:
+		ID: EffRemoveItem
+		Patterns:
+			%string%.Inventory.removeItem{%number%}[;]
+	EffRemoveLore:
+		ID: EffRemoveLore
+		Patterns:
+			%string%.Inventory.removeLore{%number%}[;]
+	EffReplaceLast:
+		ID: EffReplaceLast
+		Patterns:
+			replace last %string% with %string% in %string%
+	EffReset:
+		ID: EffReset
+		Patterns:
+			%string%.Objective.resetScore{%string%}[;]
+	EffResourcePack:
+		ID: EffResourcePack
+		Patterns:
+			send resourcepack %string% to %player%
+	EffRestore:
+		ID: EffRestore
+		Patterns:
+			%string%.Region.restore{%regions%}[;]
+	EffRestore:
+		ID: EffRestore
+		Patterns:
+			%string%.Tab.restore{%string%}[;]
+	EffResult:
+		ID: EffResult
+		Patterns:
+			%string%.Recipe.(set|register)Result{%itemtype%}[;]
+	EffReturn:
+		ID: EffReturn
+		Patterns:
+			return %object%[;]
+	EffRow:
+		ID: EffRow
+		Patterns:
+			%string%.Inventory.setRow{%number%}[;]
+	EffSelectLL:
+		ID: EffSelectLL
+		Patterns:
+			%string%.Region.selectLL{%location%,%location%}[;]
+	EffSelectLS:
+		ID: EffSelectLS
+		Patterns:
+			%string%.Region.selectLS{%location%,%number%}[;]
+	EffSend:
+		ID: EffSend
+		Patterns:
+			%string%.Tab.send{%player%}[;]
+	EffSet:
+		ID: EffSet
+		Patterns:
+			(set|put) %string% (to|in) %string% (in|to) [(yaml|yml)] [file] %string%
+	EffSet:
+		ID: EffSet
+		Patterns:
+			%string%.Tab.set{%number%,%string%}[;]
+	EffSet:
+		ID: EffSet
+		Patterns:
+			%string%.Objective.setScore{%string%}[;]
+	EffShow:
+		ID: EffShow
+		Patterns:
+			%string%.Hologram.(show|display){%location%}[;]
+	EffShutdown:
+		ID: EffShutdown
+		Patterns:
+			shutdown [server]
+	EffSize:
+		ID: EffSize
+		Patterns:
+			%string%.Region.setSize{%number%}[;]
+	EffSkin:
+		ID: EffSkin
+		Patterns:
+			(change|set) %player%'s skin to %string%
+	EffString:
+		ID: EffString
+		Patterns:
+			load script from %string%
+	EffSuffix:
+		ID: EffSuffix
+		Patterns:
+			%string%.Team.setSuffix{%player%}[;]
+	EffTag:
+		ID: EffTag
+		Patterns:
+			(set|edit) %player%'s tag to %string%
+			(set|edit) tag of %player% to %string%
+	EffTame:
+		ID: EffTame
+		Patterns:
+			tame %entity% (to|for) %player%
+	EffURL:
+		ID: EffURL
+		Patterns:
+			load script from url %string%
+	EffUnregister:
+		ID: EffUnregister
+		Patterns:
+			%string%.Inventory.unregister{}[;]
+	EffUnregister:
+		ID: EffUnregister
+		Patterns:
+			%string%.Recipe.unregister{}[;]
+	EffUnregister:
+		ID: EffUnregister
+		Patterns:
+			%string%.Objective.unregister{}[;]
+	EffUpdate:
+		ID: EffUpdate
+		Patterns:
+			%string%.Inventory.update{}[;]
+	EffUpdate:
+		ID: EffUpdate
+		Patterns:
+			update scoreboard for %player%
+	EffUpdate:
+		ID: EffUpdate
+		Patterns:
+			%string%.MySQL.executeUpdate{%string%}[;]
+	EffVisibility:
+		ID: EffVisibility
+		Patterns:
+			hide %player% for %player%
+			show %player% for %player%
+	EffWorld:
+		ID: EffWorld
+		Patterns:
+			%string%.Region.setWorld{%world%}[;]
+	UtilComments:
+		ID: UtilComments
+		Patterns:
+			//%object%
+			/*%object%
+			*%object%
+			*/%object%
+Expressions:
+	ExprAllowNether:
+		ID: ExprAllowNether
+		Return type: Boolean
+		Changers:
+			none
+		Patterns:
+			access to nether
+			allow nether
+	ExprArgument:
+		ID: ExprArgument
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			arg{%number%}[;]
+	ExprArguments:
+		ID: ExprArguments
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			args[;]
+	ExprBackup:
+		ID: ExprBackup
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			%string%.Tab.getBackup{}[;]
+	ExprBukkitVersion:
+		ID: ExprBukkitVersion
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			bukkit['s] version
+			version of bukkit
+	ExprCalendar:
+		ID: ExprCalendar
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			year
+			month
+			day
+			hour
+			minute[s]
+			second[s]
+			millisecond[s]
+	ExprCancelled:
+		ID: ExprCancelled
+		Return type: Boolean
+		Changers:
+			none
+		Patterns:
+			%string%.Inventory.getCancelled{%number%}[;]
+	ExprClosed:
+		ID: ExprClosed
+		Return type: Boolean
+		Changers:
+			none
+		Patterns:
+			%string%.Inventory.getClosed{%number%}[;]
+	ExprCommand:
+		ID: ExprCommand
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			%string%.Inventory.getCommand{%number%}[;]
+	ExprExecutor:
+		ID: ExprExecutor
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			%string%.Inventory.getExecutor{%number%}[;]
+	ExprFiles:
+		ID: ExprFiles
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			[all] file[s] in %string%
+	ExprFirstEmpty:
+		ID: ExprFirstEmpty
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			%string%.Inventory.getFirstEmpty{}[;]
+	ExprFreeMemory:
+		ID: ExprFreeMemory
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			free memory
+	ExprFunction:
+		ID: ExprFunction
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			(return|result) of (function|method) %string%{[%-objects%]}[;]
+	ExprItem:
+		ID: ExprItem
+		Return type: Item Type
+		Changers:
+			none
+		Patterns:
+			%string%.Inventory.getItem{%number%}[;]
+	ExprLore:
+		ID: ExprLore
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			%string%.Inventory.getLore{%number%}[;]
+	ExprMaxMemory:
+		ID: ExprMaxMemory
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			max memory
+	ExprMaxPlayers:
+		ID: ExprMaxPlayers
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			max players
+	ExprMotd:
+		ID: ExprMotd
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			motd
+			server['s] motd
+	ExprName:
+		ID: ExprName
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			%string%.Inventory.getName{}[;]
+	ExprNull:
+		ID: ExprNull
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			null
+	ExprOnlineMode:
+		ID: ExprOnlineMode
+		Return type: Boolean
+		Changers:
+			none
+		Patterns:
+			online mode
+	ExprPercent:
+		ID: ExprPercent
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			percent of %player%'s bossbar
+	ExprPing:
+		ID: ExprPing
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			%player%'s ping
+	ExprQuery:
+		ID: ExprQuery
+		Return type: Object
+		Changers:
+			none
+		Patterns:
+			%string%.MySQL.executeQuery{%string%,%string%}[;]
+	ExprRegion:
+		ID: ExprRegion
+		Return type: WildSkript Regions
+		Changers:
+			none
+		Patterns:
+			region %string%
+	ExprRegionAt:
+		ID: ExprRegionAt
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			Region.getAt{%location%}[;]
+	ExprRow:
+		ID: ExprRow
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			%string%.Inventory.getRow{}[;]
+	ExprServerIP:
+		ID: ExprServerIP
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			server['s] ip
+	ExprServerName:
+		ID: ExprServerName
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			server['s] name
+	ExprServerPort:
+		ID: ExprServerPort
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			server['s] port
+	ExprSlimeSize:
+		ID: ExprSlimeSize
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			%entity% size
+	ExprTPS:
+		ID: ExprTPS
+		Return type: double
+		Changers:
+			none
+		Patterns:
+			tps
+	ExprText:
+		ID: ExprText
+		Return type: Text
+		Changers:
+			none
+		Patterns:
+			text of %player%'s bossbar
+	ExprTotalMemory:
+		ID: ExprTotalMemory
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			total memory
+	ExprViewDistance:
+		ID: ExprViewDistance
+		Return type: integer
+		Changers:
+			none
+		Patterns:
+			view distance
+Types:
+	WildSkript Regions:
+		ID: Regions
+		Description:
+			WildSkript Regions
+		Usage: ...
+		Since:
+			1.5
+		Patterns:
+			regions

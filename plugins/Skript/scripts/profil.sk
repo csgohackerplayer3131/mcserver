@@ -1,0 +1,91 @@
+﻿options:
+	p: &aMC&8-&cT&fR &8»
+command /profil [<offlineplayer>]:
+	trigger:
+		if arg 1 is set:
+			if {profil::%arg 1%} is set:
+				set {_saat} to "%now%"
+				set {_kask} to arg 1's helmet
+				set {_zırh} to arg 1's chestplate
+				set {_pantolon} to arg 1's leggings
+				set {_bot} to arg 1's boots
+				open virtual chest with size 2 named "&3&n%arg 1% &eProfili" to player
+				wait 1 tick
+				if {çevrimiçi::%arg 1%} is true:
+					make gui slot 9 of player with light green dye named "&eDurum" with lore "&3%arg 1% &7Şu anda ""&a&lÇEVRİMİÇİ&7""" to close
+				else:
+					make gui slot 9 of player with gray dye named "&eDurum" with lore "&3%arg 1% &7Şu anda ""&c&lÇEVRİMDIŞI&7""||&7Sunucuya en son girişi: &e%{songiriş::%arg 1%}%" to close
+				make gui slot 0 of player with skull of arg 1 named "&eOyuncu: &c%arg 1's display name%" with lore "" to close
+				make gui slot 7 of player with diamond sword named "&cBilgilerin" with lore "&7Öldürme: &e%{öldürme::%arg 1%}% ||&7Ölme: &e%{ölme::%arg 1%}% ||&7Mob Öldürme: &e%{moböldürme::%arg 1%}% ||&7Yenilen yemekler: &e%{yenilenyemekler::%arg 1%}% ||&7Kazılan madenler: &e%{kazılanlar::%arg 1%}% ||&7Para: &e%arg 1's balance% ||&7Oyuncu Leveli(XP): &e%arg 1's level% ||&7Sunucuya ilk katıldığı tarih: &e%{ilkgiriş::%arg 1%}%" to close
+				make gui slot 8 of player with clock named "&cZaman (Sunucu saatinden hesaplar)" with lore "&7Tarih ve Saat: &f%{_saat}%" to close
+				if helmet of arg 1 is air:
+					make gui slot 1 of player with barrier named "&cKask bulunmuyor!" to nothing
+				else:
+					make gui slot 1 of player with {_kask} to nothing
+				if chestplate of arg 1 is air:
+					make gui slot 2 of player with barrier named "&cZırh bulunmuyor!" to nothing
+				else:
+					make gui slot 2 of player with {_zırh} to nothing
+				if leggings of arg 1 is air:
+					make gui slot 3 of player with barrier named "&cPantolon bulunmuyor!" to nothing
+				else:
+					make gui slot 3 of player with {_pantolon} to nothing
+				if boots of arg 1 is air:
+					make gui slot 4 of player with barrier named "&cBot bulunmuyor!" to nothing
+				else:
+					make gui slot 4 of player with {_bot} to nothing	
+				stop
+			else:
+				send "{@p} &cBu oyuncuya ait bilgi bulunamadı!"
+				stop
+		set {_saat} to "%now%"
+		set {_kask} to player's helmet
+		set {_zırh} to player's chestplate
+		set {_pantolon} to player's leggings
+		set {_bot} to player's boots
+		open virtual chest with size 2 named "&3&n%player% &eProfilin" to player
+		wait 1 tick
+		make gui slot 0 of player with skull of player named "&eSen: &e%player's display name%" with lore "" to close
+		make gui slot 7 of player with diamond sword named "&cBilgilerin" with lore "&7Öldürme: &e%{öldürme::%player%}% ||&7Ölme: &e%{ölme::%player%}% ||&7Mob Öldürme: &e%{moböldürme::%player%}% ||&7Yenilen yemekler: &e%{yenilenyemekler::%player%}% ||&7Kazılan madenler: &e%{kazılanlar::%player%}% ||&7Paran: &e%player's balance% ||&7Oyuncu Leveli(XP): &e%player's level% ||&7Sunucuya ilk katıldığın tarihin: &e%{ilkgiriş::%player%}%" to close
+		make gui slot 8 of player with clock named "&cZaman (Sunucu saatinden hesaplar)" with lore "&7Tarih ve Saat: &f%{_saat}%" to close
+		make gui slot 9 of player with light green dye named "&eDurum" with lore "&7""&a&lÇEVRİMİÇİ&7""" to close
+		if helmet of player is air:
+			make gui slot 1 of player with barrier named "&cKask bulunmuyor!" to nothing
+		else:
+			make gui slot 1 of player with {_kask} to nothing
+		if chestplate of player is air:
+			make gui slot 2 of player with barrier named "&cZırh bulunmuyor!" to nothing
+		else:
+			make gui slot 2 of player with {_zırh} to nothing
+		if leggings of player is air:
+			make gui slot 3 of player with barrier named "&cPantolon bulunmuyor!" to nothing
+		else:
+			make gui slot 3 of player with {_pantolon} to nothing
+		if boots of player is air:
+			make gui slot 4 of player with barrier named "&cBot bulunmuyor!" to nothing
+		else:
+			make gui slot 4 of player with {_bot} to nothing
+		stop
+on join:
+	{profil::%player%} isn't set:
+		set {öldürme::%player%} to 0
+		set {ölme::%player%} to 0
+		set {moböldürme::%player%} to 0
+		set {yenilenyemekler::%player%} to 0
+		set {kazılanlar::%player%} to 0
+		set {profil::%player%} to true
+		set {ilkgiriş::%player%} to now
+	set {songiriş::%player%} to now
+	set {çevrimiçi::%player%} to true
+on quit:
+	set {çevrimiçi::%player%} to false
+on death of player:
+	add 1 to {ölme::%player%}
+	add 1 to {öldürme::%attacker%}
+death of a cow or pig or sheep or chicken or zombie or spider or witch or creeper or enderman:
+	attacker is a player
+	add 1 to {moböldürme::%attacker%}
+on eat bread or cookie or apple or mushroom stew or steak:
+	add 1 to {yenilenyemekler::%player%}
+on break emerald ore or diamond ore or gold ore or iron ore or lapis ore or cobblestone:
+	add 1 to {kazılanlar::%player%}

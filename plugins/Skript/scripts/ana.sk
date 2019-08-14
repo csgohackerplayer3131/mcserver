@@ -1,0 +1,167 @@
+﻿options:
+    p: &aMC&8-&cT&fR &8»
+    noperm: &aMC&8-&cT&fR &8» &7Gerekli yetkin yok.
+on first join:
+    set {holochat::%player%} to true
+    teleport player to {spawn}
+on join:
+    {holocd::%player%} is set:
+        delete {holocd::%player%}
+    teleport player to {spawn}
+on respawn:
+    teleport player to {spawn}
+on damage:
+    damage cause is void
+    cancel event
+    teleport victim to {spawn}  
+on weather change to rain or thunder:
+    cancel event
+on command "piyango":
+    execute player command "lottery gui"
+    cancel event
+on command "sihirlisu":
+    execute player command "bar"
+    cancel event
+on command "parakutusu":
+    execute player command "mp shop"
+    cancel event
+on mine of lapis ore:
+    add 1 to {lapisödül::%player%}
+    if {lapisödül::%player%} is greater than or equal to 100:
+        give 1 gold nugget named "&eÖzel parça" with lore "&7Takasda kullanın." to player
+        set {lapisödül::%player%} to 0
+        set action bar of player to "&4&l» &3Lapis kazarken &f1 &3adet &eÖzel parça &3buldun! &4&l«"    
+        if chance of 2%:
+            give 1 nether quartz item named "&bSet parça" to player
+            set action bar of player to "&4&l» &3Taş kazarken &f1 &3adet &bSet parça &3buldun! &4&l«"
+        else if chance of 1%:
+            give 1 nether brick item named "&6Malzeme parça" to player
+            set action bar of player to "&4&l» &3Taş kazarken &f1 &3adet &6Malzeme parça &3buldun! &4&l«"    
+on command "görev" or "gorev":
+        execute player command "/jobs browse"
+        cancel event
+command /renk [<text>]:
+    permission: vip.renk
+    permission message: {@noperm}
+    trigger:
+        if arg 1 is not set:
+            open virtual chest with size 3 named "&eRenk Menü" to player
+            wait 1 tick
+            make gui slot 0 of player with light green dye named "&aAçık Yeşil" to close then run player command "/renk &a"
+            make gui slot 1 of player with green dye named "&2Kapalı Yeşil" to close then run player command "/renk &2"
+            make gui slot 2 of player with blue dye named "&9Mavi" to close then run player command "/renk &9"
+            make gui slot 3 of player with light blue dye named "&bTurkuaz" to close then run player command "/renk &b"
+            make gui slot 4 of player with cyan dye named "&3Açık Mavi" to close then run player command "/renk &3"
+            make gui slot 5 of player with dandelion yellow named "&eAçık Sarı" to close then run player command "/renk &e"
+            make gui slot 6 of player with orange dye named "&6Altın Sarısı" to close then run player command "/renk &6"
+            make gui slot 7 of player with red dye named "&cAçık Kırmızı" to close then run player command "/renk &c"
+            make gui slot 8 of player with redstone named "&4Kırmızı" to close then run player command "/renk &4"
+            make gui slot 9 of player with light gray dye named "&7Açık Gri" to close then run player command "/renk &7"
+            make gui slot 10 of player with gray dye named "&8Kapalı Gri" to close then run player command "/renk &8"
+            make gui slot 11 of player with pink dye named "&dPembe" to close then run player command "/renk &d"
+            make gui slot 12 of player with purple dye named "&5Mor" to close then run player command "/renk &5"
+            make gui slot 25 of player with shears named "&7Sıfırla" to close then run player command "/renk sil"
+            make gui slot 26 of player with red wool block named "&4Kapat" to close
+        if arg 1 is set:
+            if arg 1 is not "sil":
+                set {renk.%player%} to arg 1
+                send "{@p} &7Sohbet rengin belirlendi."
+            else:    
+                delete {renk.%player%}
+                send "{@p} &7Sohbet rengin silindi."
+on chat:
+    if {renk.%player%} is set:
+        set message to "%{renk.%player%}%%message%"
+command /çekiliş:
+    trigger:
+        player has permission "mctr.cekilis":
+            if {ly::s::started} is true:
+                send "{@p} &cZaten şu an aktif bir çekiliş var!"
+                stop
+            else:
+                set {ly::s::started} to true
+                loop all players:
+                    add loop-player to {_ly::list::*}
+                send all players title "&c&lÇEKİLİŞ" with subtitle "&aBaşlıyor!" for 3 seconds
+                play GHAST DEATH at players with pitch 1
+                wait 3 seconds
+                set {çekiliş::%player%} to 10
+                loop 10 times:
+                    send all players title "&c&lÇEKİLİŞ" with subtitle "&e%{çekiliş::%player%}%" for 1 seconds
+                    play CLICK at players with pitch 1
+                    remove 1 from {çekiliş::%player%}
+                    wait a second
+                wait 1 seconds
+                send all players title "&a&kkkkkkkkkkkkk"
+                wait 3 seconds
+                set {_ly::winner} to random element out of {_ly::list::*}
+                play FIREWORK LARGE BLAST at players with pitch 1
+                send all players title "&b%{_ly::winner}%" with subtitle "&f&lÇekilişi kazandı!" for 3 seconds
+                execute console command "crazycrate give physical event 1 %{_ly::winner}%"
+                delete {ly::*}
+                delete {çekiliş::%player%}
+        else:
+            send "{@noperm}"
+command /fix:
+    aliases: /ghost , /gf , /debug
+    trigger:
+        teleport player to player
+        wait 0.50 ticks
+        hide all players from player
+        hide player from all players
+        wait 0.50 ticks
+        reveal all players to player
+        reveal player to all players    
+        send "{@p} &fSorunlar düzeltildi."
+command /spawn [<text>]:
+    trigger:
+        if arg 1 is not set:
+            if {spawn} is not set:
+                send "{@p} &cSpawn ayarlı değil.%nl%{@p} &cAyarlamak için &7/spawn yap"
+            else:
+                teleport player to {spawn}
+                send "{@p} &aSpawna gönderildin!"
+        else if arg 1 is set:
+            if arg 1 is "yap":
+                player has permission "spawn.admin":
+                    set {spawn} to location of player
+                    send "{@p} &aSpawn yerini ayarladın!"
+                else:
+                    send "{@noperm}"
+
+command /arsafly:
+    trigger:
+        if player is in "Arsalar":
+            set player's fly mode to true
+            send "{@p} &7Uçuş modu başarıyla açıldı."
+        else:
+            send "{@p} &7Bu komut için arsanda olmalısın."
+
+command /holosohbet:
+    aliases: holochat
+    trigger:
+        {holochat::%player%} is true:
+            delete {holochat::%player%}
+            send "{@p} Holosohbet özelliği kapatıldı!" to player
+            stop
+        {hologramchat::%player%} is not set:
+            set {holochat::%player%} to true
+            send "{@p} Holosohbet özelliği açıldı." to player
+            stop
+
+on chat:
+    if {holochat::%player%} is true:
+        if {holocd::%player%} is not set:
+            bind hologram "ItemStack:BEDROCK;%player's displayname%;&f%message%" to player for 3 seconds offset by 0.0, 4.0, 0.
+            set {holocd::%player%} to true
+            wait 3 seconds
+            delete {holocd::%player%}
+        else:
+            send "{@p} &7Hologramın bitmediği için yazın holograma yansımadı." to player
+         
+on damage:
+    attacker is a player
+    victim is a player
+    if {holochat::%attacker%} is true:
+        set {holochat::%attacker%} to false
+        send "{@p} &7Hasar yediğiniz için otomatik olarak holosohbet kapandı." to attacker

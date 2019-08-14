@@ -1,0 +1,46 @@
+﻿options:
+	p: &aMC&8-&cT&fR &8»
+command /özelkit:
+	trigger:
+		if {ozelkit} contains "%ip of player%" or "%player's uuid%":
+			send "{@p} &cBu komut sadece bir kere kullanılabilir." to player
+		else:
+			if {ozelkit} is set:
+				set {ozelkit} to "%{ozelkit}%, %ip of player% %player's uuid%"
+			else:
+				set {ozelkit} to "%ip of player% %player%"
+			give diamond sword of sharpness 4 and unbreaking 3 and fire aspect 2 named "&6Özel &fKılıç" with lore "&cBizi seçtiğiniz için||&cTeşekkür ederiz.||&cSahibi &3%player%" to player
+			give diamond pickaxe of fortune 3 and unbreaking 3 and Efficiency 4 named "&6Özel &fKazma" with lore "&cBizi seçtiğiniz için||&cTeşekkür ederiz.||&cSahibi &3%player%" to player
+			give diamond axe of fortune 3 and unbreaking 3 and Efficiency 4 named "&6Özel &fBalta" with lore "&cBizi seçtiğiniz için||&cTeşekkür ederiz.||&cSahibi &3%player%" to player
+			give diamond shovel of fortune 3 and unbreaking 3 and Efficiency 4 named "&6Özel &fKürek" with lore "&cBizi seçtiğiniz için||&cTeşekkür ederiz.||&cSahibi &3%player%" to player
+			give diamond helmet of protection 4 and unbreaking 3 named "&6Özel &fKask" with lore "&cBizi seçtiğiniz için||&cTeşekkür ederiz.||&cSahibi &3%player%" to player
+			give diamond chestplate of protection 4 and unbreaking 3 named "&6Özel &fZırh" with lore "&cBizi seçtiğiniz için||&cTeşekkür ederiz.||&cSahibi &3%player%" to player
+			give diamond leggings of protection 4 and unbreaking 3 named "&6Özel &fPantalon" with lore "&cBizi seçtiğiniz için||&cTeşekkür ederiz.||&cSahibi &3%player%" to player
+			give diamond boots of protection 4 and unbreaking 3 named "&6Özel &fBot" with lore "&cBizi seçtiğiniz için||&cTeşekkür ederiz.||&cSahibi &3%player%" to player
+			give 32 enchanted golden apple named "&eHediye" with lore "&cBizi seçtiğiniz için||&cTeşekkür ederiz.||&cSahibi &3%player%" to player
+			send "{@p} &eItemleriniz envanterinize eklenmiştir." to player
+on drop:
+	if name of event-item is "&6Özel &fKılıç" or "&6Özel &fKazma" or "&6Özel &fBalta" or "&6Özel &fKürek" or "&6Özel &fKask" or "&6Özel &fZırh" or "&6Özel &fPantalon" or "&6Özel &fBot" or "&eHediye":
+		cancel event
+		send "{@p} &cSana özel itemleri yere atamazsın." to player
+on break:
+	tool's name is "&6Özel &fKılıç" or "&6Özel &fKazma" or "&6Özel &fBalta" or "&6Özel &fKürek":
+		If lore of the player's tool contains "%player%":
+			stop
+		else:
+			cancel event
+			send "{@p} &cBu item sana ait değil." to player
+on damage:
+	if name of attacker's tool is "&6Özel &fKılıç" or "&6Özel &fKazma" or "&6Özel &fBalta" or "&6Özel &fKürek":
+		If lore of the attacker's tool contains "%attacker%":
+			stop
+		else:
+			cancel event
+			send "{@p} &cBu item sana ait değil." to attacker
+on eating of enchanted golden apple:
+	tool's name is "&eHediye":
+		If lore of the player's tool contains "%player%":
+			stop
+		else:
+			cancel event
+			send "{@p} &cBu item sana ait değil." to player

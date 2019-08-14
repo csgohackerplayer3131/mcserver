@@ -1,0 +1,15 @@
+﻿StaffChatFormat: '%staff% %displayname% &4» &c%message%'
+
+Messages:
+  Prefix: '&3[&eYetkiliSohbet&3] &r'
+  StaffPrefix: '&3[&4&lYetkili&3] &r'
+  ReloadConfig: '&aConfig yenilendi.'
+  NotPermission: '&cBu komutu kullanabilmek için yeterli yetkin yok!'
+  StaffChat-Enabled: '&eYetkiliSohbet &aaktif.'
+  StaffChat-Disabled: '&eYetkiliSohbet &ckapatıldı.'
+  StaffChat-Already-Enabled: '&eYetkiliSohbet &azaten aktif!'
+  StaffChat-Already-Disabled: '&eYetkiliSohbet &czaten kapatıldı!'
+
+Permissions:
+  StaffPerm: staffchat.use
+  ReloadPerm: staffchat.reload

@@ -1,0 +1,118 @@
+﻿options:
+	p: &aMC&8-&cT&fR &8»
+	noperm: &aMC&8-&cT&fR &8» &cBu komutu kullanabilmek için yeterli yetkin yok!
+command /sohbet [<text>]:
+	trigger:
+		if arg 1 is not set:
+			open virtual chest with size 1 named "&6&lSohbet&3++" to player
+			wait 1 tick
+			if {sohbetkapat} is true:
+				make gui slot 0 of player with emerald block named "&aSohbet Aç" with lore "&eTıklarsınız sohbet açılır." to close then run player command "sohbetadmin aç"
+			else:
+				make gui slot 0 of player with redstone block named "&cSohbet Kapat" with lore "&eTıklarsınız sohbet kapanır." to close then run player command "sohbetadmin kapat"
+			make gui slot 4 of player with gold block named "&aSohbet Temizle" with lore "&eTıklarsınız sohbet temizlenir." to close then run player command "sohbetadmin temizle"
+			make gui slot 8 of player with iron block named "&aSohbet Duyuru" with lore "&eTıklayıp sohbete duyuru yazın." to close then run player command "dd"
+command /dd:
+	trigger:
+		player has permission "sohbet.admin":
+			set {duyuru.%player%} to true
+			send "{@p} &cSohbete yazacağın duyuru olarak yayınlacaktır."
+		else:
+			send "{@noperm}"
+command /sohbetadmin [<text>] [<text>]:
+	trigger:
+		player or executor has permission "sohbet.admin":
+			if arg 1 is "kapat":
+				if arg 2 is not set:
+					set {sohbetkapat} to true
+					loop 100 times:
+						send "" to players
+					send " "
+					send "&7===========[ &c&lSOHBET KAPATILDI &0&7]===========" to players
+					send " " to players
+					send "&7&oYetkili %player's display name%&7&o, sohbeti kapattı!" to players
+					send "&7&oSohbetin kapatılma sebebi: &c&o[Belirtilmedi]" to players
+					send " " to players
+					send "&7===========[ &c&lSOHBET KAPATILDI &0&7]==========="  to players
+					send " "
+				if arg 2 is set:
+					set {sohbetkapat} to true
+					loop 100 times:
+						send "" to players
+					send " " to players
+					send "&7===========[ &c&lSOHBET KAPATILDI &0&7]===========" to players
+					send " " to players
+					send "&7&oYetkili %player's display name%&7&o, sohbeti kapattı!" to players
+					send "&7&oSohbetin kapatılma sebebi: &c&o[%arg 2%]" to players
+					send " " to players
+					send "&7===========[ &c&lSOHBET KAPATILDI &0&7]===========" to players
+					send " "
+			if arg 1 is "aç":
+				set {sohbetkapat} to false
+				loop 100 times:
+					send "" to players
+				send " "
+				send "&7===========[ &a&lSOHBET AÇILDI &0&7]===========" to players
+				send " " to players
+				send "&7&oYetkili %player's display name%&7&o, sohbeti tekrardan açtı!" to players
+				send " " to players
+				send "&7===========[ &a&lSOHBET AÇILDI &0&7]===========" to players
+				send " "
+			if arg 1 is "duyuru":
+				if arg 2 is set:
+					send "{@p} %colored arg-2%" to players
+				else:
+					send "{@p} &cMesajınızı girin"
+			if arg 1 is "temizle":
+				loop 100 times:
+					send "" to players
+				send players title "&4&lSOHBET" with subtitle "&eSohbet temizlendi, iyi oyunlar!"		
+			if arg 1 is not set:
+				send "{@p} &e/sohbet &c<aç>&7, &c<kapat>&7, &c<duyuru>&7, &c<temizle>"
+		else:
+			send "{@noperm}"
+command /komut [<text>]:
+	trigger:
+		player has permission "komut.admin":
+			if arg 1 is set:
+				if arg 1 is "aç":
+					set {komutgor::%player%} to true
+					send "{@p} &eArtık oyuncuların kullandıkları komutları görebilirsin."
+				if arg 1 is "kapat":
+					set {komutgor::%player%} to false
+					send "{@p} &cArtık oyuncuların kullandıkları komutları göremezsin."
+			else:
+				send "{@p} &e/komut &c<aç>&7, &c<kapat>"
+		else:
+			send "{@noperm}"	
+on command:
+	if sender is a player:
+		loop all players:
+			if {komutgor::%loop-player%} is true:
+				loop-player has permission "komut.admin":
+					if player is not loop-player:
+						command is not "login" or "register" or "l" or "reg":
+							send "&3%executor%&8: &7/%full command%" to loop-player
+on command:
+	command is "msg" or "m" or "tell" or "w" or "r"
+	if {sohbetkapat} is true:
+		cancel event
+		send "{@p} &cSohbet kapalıyken özel mesaj kullanamazsın."
+on chat:
+	if {sohbetkapat} is true:
+		if player has permission "sohbet.admin":
+			stop
+		else:
+			cancel event
+			send "{@p} &4&oSohbet kapalıdır, konuşamazsın."
+on chat:
+	if {duyuru.%player%} is true:
+		cancel event
+		set {mesaj.%player%} to message
+		send players title "&f» &4&lDikkat &f«" with subtitle "&b%{mesaj.%player%}%"
+		delete {duyuru.%player%}
+		delete {mesaj.%player%}
+on login:
+	if {duyuru.%player%} is true:
+		delete {duyuru.%player%}
+		delete {mesaj.%player%}

@@ -1,0 +1,25 @@
+--- !Status
+Default:
+  Description:
+  - |-
+    &f                     &a&lMC&8&l-&c&lT&f&lR &6&lNETWORK
+    &f       &8&l‹ &e2018 Faction Plugin Paketi 1.8-1.12 &8&l›
+--- !Plugin
+Stats: true
+PlayerTracking:
+  Enabled: true
+  Storage: !JSONStorage
+    Enabled: true
+    SaveDelay: 5m
+Samples:
+  Multiple: false
+  DynamicPlayers: false
+Unknown:
+  PlayerName: player
+  PlayerCount: ???
+  Date: ???
+Favicon:
+  Timeout: 10s
+  RecursiveFolderSearch: false
+  ResizeStrategy: SCALE
+

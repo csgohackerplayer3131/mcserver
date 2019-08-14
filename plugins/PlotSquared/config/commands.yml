@@ -1,0 +1,568 @@
+plot:
+  aliases:
+  - p
+  - plot
+  - arsa
+  usage: ''
+  description: ''
+  confirmation: false
+buy:
+  aliases:
+  - buy
+  - arsaal
+  usage: /plot buy
+  description: Arsayı satın al!
+  confirmation: false
+save:
+  aliases:
+  - save
+  - backup
+  usage: ''
+  description: Arsanı kayıt altına al!
+  confirmation: false
+load:
+  aliases:
+  - load
+  - restore
+  usage: /plot restore
+  description: Arsanı yükle!
+  confirmation: false
+confirm:
+  aliases:
+  - confirm
+  - kabul
+  usage: ''
+  description: Kabul et
+  confirmation: false
+template:
+  aliases:
+  - template
+  usage: /plot template [import|export] <world> <template>
+  description: World template oluşturur!
+  confirmation: false
+download:
+  aliases:
+  - download
+  - dl
+  usage: /plot download [schematic|bo3|world]
+  description: Arsanı indir!
+  confirmation: false
+update:
+  aliases:
+  - update
+  - updateplugin
+  - guncelle
+  usage: /plot update
+  description: Plugini güncelle!
+  confirmation: false
+setup:
+  aliases:
+  - setup
+  - create
+  - yarat
+  usage: /plot setup
+  description: Arsa dünyası oluştur!
+  confirmation: false
+area:
+  aliases:
+  - area
+  - world
+  usage: /plot area <create|info|list|tp|regen>
+  description: Yeni dünya oluştur
+  confirmation: true
+debugsavetest:
+  aliases:
+  - debugsavetest
+  usage: /plot debugsavetest
+  description: This command will force the recreation of all plots in the DB
+  confirmation: false
+debugloadtest:
+  aliases:
+  - debugloadtest
+  usage: /plot debugloadtest
+  description: This debug command will force the reload of all plots in the DB
+  confirmation: false
+createroadschematic:
+  aliases:
+  - createroadschematic
+  - crs
+  usage: /plot createroadschematic
+  description: Add a road schematic to your world using the roads around your current plot
+  confirmation: false
+debugallowunsafe:
+  aliases:
+  - debugallowunsafe
+  usage: /plot debugallowunsafe
+  description: Allow unsafe actions until toggled off
+  confirmation: false
+regenallroads:
+  aliases:
+  - regenallroads
+  - rgar
+  usage: /plot regenallroads <world> [height]
+  description: Regenerate all roads in the map using the set road schematic
+  confirmation: false
+claim:
+  aliases:
+  - claim
+  - c
+  - satın
+  usage: /plot claim
+  description: Arsayı satın al!
+  confirmation: false
+auto:
+  aliases:
+  - auto
+  - a
+  usage: /plot auto [length,width]
+  description: Yakınlardan arsa satın al!
+  confirmation: false
+visit:
+  aliases:
+  - visit
+  - v
+  - tp
+  - teleport
+  - goto
+  - home
+  - h
+  usage: /plot visit [<player>|<alias>|<world>|<id>] [#]
+  description: Arsa ziyaret et!
+  confirmation: false
+set:
+  aliases:
+  - set
+  - s
+  usage: /plot set <biome|alias|home|flag> <value...>
+  description: Arsa ayarlarını ayarların!
+  confirmation: false
+clear:
+  aliases:
+  - clear
+  - reset
+  - sıfırla
+  usage: /plot clear
+  description: Arsanı sıfırla!
+  confirmation: true
+delete:
+  aliases:
+  - delete
+  - dispose
+  - del
+  - reset
+  usage: /plot delete
+  description: Arsayı sil!
+  confirmation: true
+trust:
+  aliases:
+  - trust
+  - t
+  usage: /plot trust <player>
+  description: Oyuncuya arsanda yetki ver!
+  confirmation: false
+add:
+  aliases:
+  - add
+  - a
+  usage: /plot add <player>
+  description: Arsana oyuncu ekle!
+  confirmation: false
+leave:
+  aliases:
+  - leave
+  usage: ''
+  description: Arsadan ayrl
+  confirmation: false
+deny:
+  aliases:
+  - deny
+  - d
+  - ban
+  usage: /plot deny <player>
+  description: Oyuncuyu arsandan yasakla!
+  confirmation: false
+remove:
+  aliases:
+  - remove
+  - r
+  - untrust
+  - ut
+  - undeny
+  usage: /plot remove <player>
+  description: Oyuncuyu arsandan sil!
+  confirmation: false
+info:
+  aliases:
+  - info
+  - i
+  - bilgi
+  usage: /plot info <id>
+  description: Arsan hakkında bilgi al!
+  confirmation: false
+near:
+  aliases:
+  - near
+  - n
+  usage: /plot near
+  description: En yakın oyuncuları göster!
+  confirmation: false
+list:
+  aliases:
+  - list
+  - l
+  - find
+  - search
+  - liste
+  usage: /plot list <forsale|mine|shared|world|top|all|unowned|unknown|player|world|done|fuzzy <search...>> [#]
+  description: Arsa listesi
+  confirmation: false
+debug:
+  aliases:
+  - debug
+  usage: /plot debug [msg]
+  description: De-bug bilgilerini gör
+  confirmation: false
+schematic:
+  aliases:
+  - schematic
+  - sch
+  usage: /plot schematic <arg...>
+  description: Schematic komutu
+  confirmation: false
+plugin:
+  aliases:
+  - plugin
+  - version
+  usage: ''
+  description: Plugin bilgisi
+  confirmation: false
+purge:
+  aliases:
+  - purge
+  usage: /plot purge world:<world> area:<area> id:<id> owner:<owner> shared:<shared> unknown:[true|false]
+  description: Purge all plots for a world
+  confirmation: true
+reload:
+  aliases:
+  - reload
+  usage: /plot reload
+  description: Ayarları yenile!
+  confirmation: false
+relight:
+  aliases:
+  - relight
+  usage: ''
+  description: Relight your plot
+  confirmation: false
+merge:
+  aliases:
+  - merge
+  - m
+  - birlestir
+  usage: /plot merge <all|n|e|s|w> [removeroads]
+  description: 2 arsanı birleştirebilirsin!
+  confirmation: true
+debugpaste:
+  aliases:
+  - debugpaste
+  - dp
+  usage: /plot debugpaste
+  description: Upload settings.yml, worlds.yml, commands.yml and latest.log to www.hastebin.com
+  confirmation: false
+unlink:
+  aliases:
+  - unlink
+  - u
+  - unmerge
+  usage: /plot unlink
+  description: Unlink a mega-plot
+  confirmation: true
+kick:
+  aliases:
+  - kick
+  - k
+  - at
+  usage: <player>
+  description: Oyuncuyu arsandan at!
+  confirmation: false
+rate:
+  aliases:
+  - rate
+  - rt
+  - oy
+  - oyver
+  - oyla
+  usage: /plot rate [#|next]
+  description: Arsaya oy ver
+  confirmation: false
+debugclaimtest:
+  aliases:
+  - debugclaimtest
+  usage: ''
+  description: If you accidentally delete your database, this command will attempt to restore all plots based on the data from plot signs. Execution time may vary
+  confirmation: false
+inbox:
+  aliases:
+  - inbox
+  usage: /plot inbox [inbox] [delete <index>|clear|page]
+  description: Arsan hakkında yorumları gör!
+  confirmation: false
+comment:
+  aliases:
+  - comment
+  usage: ''
+  description: Arsayı yorumla!
+  confirmation: false
+database:
+  aliases:
+  - database
+  - convert
+  usage: /plot database [area] <sqlite|mysql|import>
+  description: Convert/Backup Storage
+  confirmation: false
+swap:
+  aliases:
+  - swap
+  - switch
+  - takas
+  - değiştir
+  usage: /plot swap <X;Z>
+  description: Swap two plots
+  confirmation: false
+music:
+  aliases:
+  - music
+  - muzik
+  usage: /plot music
+  description: Müzik aç
+  confirmation: false
+debugroadregen:
+  aliases:
+  - debugroadregen
+  usage: /plot debugroadregen
+  description: Regenerate all roads based on the road schematic
+  confirmation: false
+debugexec:
+  aliases:
+  - debugexec
+  - exec
+  - $
+  usage: ''
+  description: Mutli-purpose debug command
+  confirmation: false
+setflag:
+  aliases:
+  - setflag
+  - f
+  - flag
+  - setf
+  - setflag
+  usage: /plot flag <set|remove|add|list|info> <flag> <value>
+  description: Set plot flags
+  confirmation: false
+target:
+  aliases:
+  - target
+  usage: /plot target <<plot>|nearest>
+  description: Target a plot with your compass
+  confirmation: false
+debugfixflags:
+  aliases:
+  - debugfixflags
+  usage: /plot debugfixflags <world>
+  description: Attempt to fix all flags for a world
+  confirmation: false
+move:
+  aliases:
+  - move
+  - debugmove
+  usage: /plot move <X;Z>
+  description: Arsanı taşı
+  confirmation: false
+condense:
+  aliases:
+  - condense
+  usage: ''
+  description: Condense a plotworld
+  confirmation: false
+copy:
+  aliases:
+  - copy
+  - copypaste
+  - kopyala
+  usage: /plot copy <X;Z>
+  description: Copy a plot
+  confirmation: false
+chat:
+  aliases:
+  - chat
+  - sohbet
+  usage: /plot chat [on|off]
+  description: Arsa sohbetini açıp kapat!
+  confirmation: false
+trim:
+  aliases:
+  - trim
+  usage: /plot trim <world> [regenerate]
+  description: Delete unmodified portions of your plotworld
+  confirmation: false
+done:
+  aliases:
+  - done
+  - submit
+  - bitti
+  - bitir
+  usage: ''
+  description: Mark a plot as done
+  confirmation: false
+continue:
+  aliases:
+  - continue
+  - devam
+  usage: ''
+  description: Continue a plot that was previously marked as done
+  confirmation: false
+bo3:
+  aliases:
+  - bo3
+  - bo2
+  usage: ''
+  description: Mark a plot as done
+  confirmation: false
+middle:
+  aliases:
+  - middle
+  - center
+  - centre
+  usage: /plot middle
+  description: Arsa merkezine git
+  confirmation: false
+grant:
+  aliases:
+  - grant
+  usage: /plot grant <check|add> [player]
+  description: ''
+  confirmation: false
+setowner:
+  aliases:
+  - setowner
+  - owner
+  usage: /plot setowner <player>
+  description: Arsa sahibini değiştirir!
+  confirmation: true
+setdescription:
+  aliases:
+  - setdescription
+  - desc
+  - setdesc
+  - setd
+  - description
+  usage: /plot desc <description>
+  description: Arsana açıklama eklersin!
+  confirmation: false
+setbiome:
+  aliases:
+  - setbiome
+  - biome
+  - sb
+  - setb
+  - b
+  usage: /plot biome [biome]
+  description: Arsa biyomunu ayarlarsın!
+  confirmation: false
+setalias:
+  aliases:
+  - setalias
+  - alias
+  usage: /plot alias <alias>
+  description: Arsana isim ver!
+  confirmation: false
+sethome:
+  aliases:
+  - sethome
+  - sh
+  - seth
+  usage: /plot sethome [none]
+  description: Arsa spawn noktanı belirle!
+  confirmation: false
+cluster:
+  aliases:
+  - cluster
+  - clusters
+  usage: ''
+  description: Manage a plot cluster
+  confirmation: false
+debugimportworlds:
+  aliases:
+  - debugimportworlds
+  usage: ''
+  description: Import worlds by player name
+  confirmation: false
+toggle:
+  aliases:
+  - toggle
+  - attribute
+  usage: ''
+  description: Toggle per user settings
+  confirmation: false
+  chat:
+    aliases:
+    - chat
+    usage: ''
+    description: Arsa sohbetini inaktif et!
+    confirmation: false
+  titles:
+    aliases:
+    - titles
+    usage: ''
+    description: Arsa mesajlarını kapatır
+    confirmation: false
+  worldedit:
+    aliases:
+    - worldedit
+    - we
+    - wea
+    usage: ''
+    description: Toggle worldedit area restrictions
+    confirmation: false
+  chatspy:
+    aliases:
+    - chatspy
+    - spy
+    usage: ''
+    description: Toggle admin chat spying
+    confirmation: false
+  clear-confirmation:
+    aliases:
+    - clear-confirmation
+    usage: ''
+    description: Toggle autoclear confirmation
+    confirmation: false
+help:
+  aliases:
+  - help
+  - he
+  - '?'
+  usage: help [category|#]
+  description: Arsa yardım komutu
+  confirmation: false
+uuidconvert:
+  aliases:
+  - uuidconvert
+  usage: /plot uuidconvert <lower|offline|online>
+  description: Debug UUID conversion
+  confirmation: false
+weanywhere:
+  aliases:
+  - weanywhere
+  - wea
+  usage: /plot weanywhere
+  description: Force bypass of WorldEdit
+  confirmation: false
+changelog:
+  aliases:
+  - changelog
+  - cl
+  usage: /plot changelog
+  description: View the changelog
+  confirmation: false

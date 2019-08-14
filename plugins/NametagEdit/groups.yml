@@ -1,0 +1,121 @@
+﻿Groups:  
+  kurucu:
+    Permission: nte.kurucu
+    Prefix: '&4&lKURUCU &f'
+    Suffix: ''
+    SortPriority: 1
+  admin:
+    Permission: nte.admin
+    Prefix: '&c&lADMIN &4'
+    Suffix: ''
+    SortPriority: 1
+  moderator:
+    Permission: nte.moderator
+    Prefix: '&6Moderatör &3'
+    Suffix: ''
+    SortPriority: 1
+  mimar:
+    Permission: nte.mimar
+    Prefix: '&eMimar &3'
+    Suffix: ''
+    SortPriority: 2
+  rehber:
+    Permission: nte.rehber
+    Prefix: '&eRehber &a'
+    Suffix: ''
+    SortPriority: 2
+  mvip+:
+    Permission: nte.mvip+
+    Prefix: '&6MVIP&4+ &e'
+    Suffix: ''
+    SortPriority: 3
+  mvip:
+    Permission: nte.mvip
+    Prefix: '&6MVIP &e'
+    Suffix: ''
+    SortPriority: 3
+  vip+:
+    Permission: nte.vip+
+    Prefix: '&bVIP&c+ &e'
+    Suffix: ''
+    SortPriority: 3
+  vip:
+    Permission: nte.vip
+    Prefix: '&bVIP &e'
+    Suffix: ''
+    SortPriority: 3
+  youtuber:
+    Permission: nte.youtuber
+    Prefix: '&4You&fTuber &c'
+    Suffix: ''
+    SortPriority: 3
+  acemi:
+    Permission: nte.acemi
+    Prefix: '&8[&bA&8] &3'
+    Suffix: ''
+    SortPriority: -1
+  çırak:
+    Permission: nte.çırak
+    Prefix: '&8[&bÇ&8] &3'
+    Suffix: ''
+    SortPriority: -1
+  oyuncu:
+    Permission: nte.oyuncu
+    Prefix: '&8[&bO&8] &3'
+    Suffix: ''
+    SortPriority: -1
+  uzman:
+    Permission: nte.uzman
+    Prefix: '&8[&3U&8] &3'
+    Suffix: ''
+    SortPriority: -1
+  usta:
+    Permission: nte.usta
+    Prefix: '&8[&9U&8] &3'
+    Suffix: ''
+    SortPriority: -1
+  asil:
+    Permission: nte.asil
+    Prefix: '&8[&3A&8] &3'
+    Suffix: ''
+    SortPriority: -1
+  kahraman:
+    Permission: nte.kahraman
+    Prefix: '&8[&3K&8] &3'
+    Suffix: ''
+    SortPriority: -1
+  efsanevi:
+    Permission: nte.efsanevi
+    Prefix: '&8[&9E&8] &3'
+    Suffix: ''
+    SortPriority: -1
+  vezir:
+    Permission: nte.vezir
+    Prefix: '&8[&9V&8] &3'
+    Suffix: ''
+    SortPriority: -1
+  kral:
+    Permission: nte.kral
+    Prefix: '&8[&9K&8] &3'
+    Suffix: ''
+    SortPriority: -1
+  imparator:
+    Permission: nte.imparator
+    Prefix: '&8[&1I&8] &3'
+    Suffix: ''
+    SortPriority: -1
+  profesyonel:
+    Permission: nte.profesyonel
+    Prefix: '&8[&1P&8] &3'
+    Suffix: ''
+    SortPriority: -1
+  zengin:
+    Permission: nte.zengin
+    Prefix: '&8[&1Z&8] &3'
+    Suffix: ''
+    SortPriority: -1
+  emekli:
+    Permission: nte.emekli
+    Prefix: '&8[&1E&8] &3'
+    Suffix: ''
+    SortPriority: -1

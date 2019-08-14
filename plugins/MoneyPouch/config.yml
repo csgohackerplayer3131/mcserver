@@ -1,0 +1,86 @@
+#MoneyPouch configuration 2.1
+help:
+ - '&8&m-----------------'
+ - '&5&lMoneyPouch v%version%'
+ - ''
+ - '&7&o/mp <tier> <player> [amount] : Para kutusu almak <tier>'
+ - '&7&o/mp list : Tüm para kasalarını listele'
+ - '&7&o/mp shop : Parakutu marketini açar'
+ - '&7&o/mp reload : Configi yeniler'
+ - ''
+ - '%author%'
+ - '&8&m-----------------'
+pouches:
+  tier:
+    1:
+      name: '&6Kutu &f#1'
+      item: 'ENDER_CHEST'
+      pricerange:
+        from: '1000'
+        to: '10000'
+      lore:
+        - '&7Bu küçük kutu, zombileri öldürerek alındı'
+        - '&7İçinde az bir miktar ganimet saklıyor'
+    2:
+      name: '&6Kutu &f#2'
+      item: 'ENDER_CHEST'
+      pricerange:
+        from: '10001'
+        to: '50000'
+      lore:
+        - '&7Bu esrarengiz kutu bazı casuslar'
+        - '&7Tarafından çimenlerin arasında bulundu'
+        - '&7İçinde güçlü bir ganimet duruyor'
+    3:
+      name: '&6Kutu &f#3'
+      item: 'ENDER_CHEST'
+      pricerange:
+        from: '50001'
+        to: '200000'
+      lore:
+        - '&7Bu gizemli kutu herobrine adı'
+        - '&7Verilen mareşalnin mağrasından alındı'
+        - '&7İçinde büyük ganimetler saklıyor'
+    4:
+      name: '&6Kutu &f#4'
+      item: 'ENDER_CHEST'
+      pricerange:
+        from: '200001'
+        to: '500000'
+      lore:
+        - '&7Bu kutu ender dragon öldürülünce düştü'
+        - '&7Ender ejderhayı 4 casur öldürdü'
+        - '&7Ve bu kutuyu getirdiler'
+        - '&7İçindeki ganimet çok gibi gözüküyor'
+    5:
+      name: '&6Kutu &f#5'
+      item: 'ENDER_CHEST'
+      pricerange:
+        from: '500001'
+        to: '2000000'
+      lore:
+        - '&7Bu kutu wither boss dan çalındı'
+        - '&7İçindeki ganimet oldukça büyük' 
+  sound:
+    enabled: true
+    opensound: 'CHEST_OPEN'
+    revealsound: 'ANVIL_LAND'
+    endsound: 'EXPLODE'
+  title:
+    speedintick: 10
+    format: false
+shop:
+  enabled: true
+  buyable:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+  prices:
+    1: 6000
+    2: 30000
+    3: 110000
+    4: 380000
+    5: 1200000
+  inventoryname: '&3Para kutuları'

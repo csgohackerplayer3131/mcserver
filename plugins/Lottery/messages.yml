@@ -1,0 +1,69 @@
+Prefix: '&8[&bPiyango&8] '
+NoPermission: '&cYetkin yok!'
+Buy: '&6%tickets% &abaşarıyla piyango bileti aldın!'
+GlobalBuy: '&6%player% &aadlı oyuncu &6%tickets% &aPiyango bileti aldı!'
+NoMoney: '&7Yeterli bakiye yok &6%money% &7TL ye ihtiyacın var'
+TicketLimit: '&cBilet limitin doldu!'
+Cooldown: '&7Beklemelisin &6%time% &7süre sonra almayı dene'
+Win: '&6%player% &aAdlı oyuncu piyango &6&l%money% &aTL ile kazandi'
+NoPlayers: '&cPiyango için oyuncu yok.'
+FewPlayers: '&cBaşlamak için yeterli oyuncu yok!'
+NotOnline: '&3%player% &cKazandı ama oyunda değil.'
+BlockedWorld: '&cKazanan &3%player% &cyasaklı bir dünyada ve kazanamadı.'
+Reminder: '&aPiyangonun başlamasına &f%time% &aDakika var! Yatırdığın para: &6%pot%'
+ToggleOFFBuyMessage: '&cArtık diğer oyunculardan satın al mesajları almazsınız!'
+ToggleONBuyMessage: '&aArtık diğer oyunculardan satın al mesajları alacaksınız!'
+ToggleOFFReminderMessage: '&cArtık herhangi bir hatırlatma mesajı almayacaksınız!'
+ToggleONReminderMessage: '&aŞimdi tekrar hatırlatma mesajları alacaksınız!'
+Status:
+- '       &b&lPiyango'
+- ' '
+- '&aSenin biletlerin: &c%ptickets%'
+- ' '
+- '&aToplam biletler: &c%gtickets%'
+- ' '
+- '&aYatırdığın  para: &c%pot%'
+- ' '
+- '&aBaşlamasına: &c%draw% &aDakika'
+- ' '
+- '&aÖnceki kazanan: &c%winner%'
+GUI:
+  NameTag: '&aSenin biletlerin: &c%tickets%'
+  NameTagLore: '&aYatırdığın para: &c%money%'
+  LastWinner: '&aÖnceki kazanan: &6%name%'
+  GlobalTickets: '&eTıkla ve satın alınan biletlere bak'
+  DrawTime: '&aBaşlamasına: &6%time% &aDakika'
+  BuyItem: '&6Tıkla ve bilet al'
+  GlobalTicketsP: '&bBiletlerin: &c%tickets%'
+  ToggleBuyItem: '&6Genel satın alma iletisini değiştir'
+  ToggleReminderItem: '&6Hatırlatıcı mesajını değiştir'
+  BuyTickets:
+    Papers: '&c%amount% &bTane al'
+    BuyAll: '&bAlabildiğin kadar al'
+    PapersLore: '&c%money% &7TL ye ihtiyacın var'
+    BackBlock: '&cAna menüye dön'
+  AllPlayers:
+    LastPage: '&cSon Sayfa'
+    NextPage: '&aSonraki Sayfa'
+    CurrentPage: '&9Geçerli sayfa: &7%page%'
+HelpPage:
+  Users:
+  - §7===================================
+  - §8[§bPiyango§8]
+  - §8[§bPiyango§8] §e§l§o/Lottery buy (Number)
+  - §8[§bPiyango§8]
+  - §8[§bPiyango§8] §e§l§o/Lottery status
+  - §8[§bPiyango§8]
+  - §8[§bPiyango§8] §e§l§o/Lottery gui
+  - §8[§bPiyango§8]
+  - §7===================================
+  Admins:
+  - §7===================================
+  - §8[§bPiyango§8]
+  - §8[§bPiyango§8] §e§l§o/Lottery draw
+  - §8[§bPiyango§8]
+  - §8[§bPiyango§8] §e§l§o/Lottery reload
+  - §8[§bPiyango§8]
+  - §8[§bPiyango§8] §e§l§o/Lottery addpot <Number>
+  - §8[§bPiyango§8]
+  - §7===================================

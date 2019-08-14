@@ -1,0 +1,16 @@
+cooldown: '&6[Para Kutusu] &cAçılan para kutusunun açılmasını bekleyin!'
+no-permission: '&6[Para Kutusu] &cYetkin yok'
+reload-config: '&6[Para Kutusu] &aConfig yenilendi.'
+money-receive: '&6[Para Kutusu] &7Para kutusundan &a%payment%TL çıkardın.'
+numberformatexception: '&cBu öğe bozuk, lütfen bir yöneticiye bildirin (NumberFormatException)'
+low-range-above-high-range: '&cBu öğe bozuldu, lütfen bir yöneticiye rapor verin (düşük
+  aralık yüksek aralığa göre daha yüksek (veya eşittir)'
+gui-shop-charge: '&6[Para Kutusu] &7Sen &a%payment%&7 TL ye para kutusu aldın.'
+not-enough-money: '&6[Para Kutusu] &7Para kutusunu almak için &a%payment%&7 TL olması lazım.'
+title:
+  moneysymbol: TL
+  moneycolor: '&a'
+  blockedcolor: '&e&k'
+  subtitle: '&fPara Kutusu Açılıyor...'
+item-receive: '&aAlınan &f%item%'
+item-give: '%player% %item% &averildi'

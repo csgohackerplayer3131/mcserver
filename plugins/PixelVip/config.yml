@@ -1,0 +1,188 @@
+# =============== PixelVip Configuration Options ================
+# 
+# This is the default configuration and some information about some configurations.
+# 
+# In "groups" on "commands" and "cmdChances"(Lists) you can use this placeholders:
+# - {p} = Players Name
+# - {vip} = Vip Group
+# - {playergroup} = Player Group before Vip activation
+# - {days} = Days of activated Vip
+# 
+# In "groups" > "cmdChances"(List) you can add commands to run based on a % chance. 
+# Use numbers below 0-100 like the example on "vip1".
+# 
+# In "configs" > "cmdOnRemoveVip"(String) you can use this placeholders:
+# - {p} = Player Name
+# - {vip} = Name of Vip Removed
+# 
+# In "configs" > "commandsToRunOnChangeVip"(List) you can use this placeholders:
+# - {p} = Player Name
+# - {newvip} = Name of Vip the player is changing to
+# - {oldvip} = Name of Vip the player is changing from
+# 
+# In "configs" > "commandsToRunOnVipFinish" and "run-on-vip-finish" (Lists) you can use this placeholders:
+# - {p} = Player Name
+# - {vip} = Name of Vip
+# - {playergroup} = Player Group before Vip activation
+# 
+# On Vault options, you can use "set" to set the VIP group or "add" to add VIP group to player.
+# *Using Vault you don't need to set any permission plugin command to set groups, Vault will do all this jobs.
+
+
+groups:
+  VIP:
+    essentials-kit: VIP
+    commands:
+    - broadcast &3{p} &7Adlı oyuncu &6{days} &7günlüğüne &6{vip} &7satın almıştır.
+    - eco give {p} 100000
+    - xp give {p} 100
+    cmdChances:
+      '100':
+      - nothing
+  VIP+:
+    essentials-kit: VIP+
+    commands:
+    - broadcast &3{p} &7Adlı oyuncu &6{days} &7günlüğüne &6{vip} &7satın almıştır.
+    - eco give {p} 300000
+    - xp give {p} 150
+    cmdChances:
+      '100':
+      - nothing
+  MVIP:
+    essentials-kit: MVIP
+    commands:
+    - broadcast &3{p} &7Adlı oyuncu &6{days} &7günlüğüne &6{vip} &7satın almıştır.
+    - eco give {p} 600000
+    - xp give {p} 250
+    cmdChances:
+      '100':
+      - nothing
+  MVIP+:
+    essentials-kit: MVIP+
+    commands:
+    - broadcast &3{p} &7Adlı oyuncu &6{days} &7günlüğüne &6{vip} &7satın almıştır.
+    - eco give {p} 900000
+    - xp give {p} 300
+    cmdChances:
+      '100':
+      - nothing
+configs:
+  database:
+    type: file
+    mysql:
+      host: jdbc:mysql://localhost:3306/
+      db-name: pixelvip
+      username: user
+      password: pass
+      keys:
+        table-name: pixelvip_keys
+        columns:
+          key: col_key
+          group: col_group
+          duration: col_duration
+          uses: col_uses
+          cmds: col_cmds
+          info: col_info
+          comments: col_comments
+      vips:
+        table-name: pixelvip_vips
+        columns:
+          uuid: col_uuid
+          vip: col_vip
+          playerGroup: col_playerGroup
+          duration: col_duration
+          nick: col_nick
+          expires-on-exact: col_expires
+          active: col_active
+          kits: col_kits
+          comments: col_comments
+      transactions:
+        table-name: pixelvip_transactions
+        columns:
+          idt: col_idt
+          nick: col_nick
+  spigot:
+    clickKeySuggest: true
+    clickSuggest: /usekey {key}
+  key-size: 10
+  Vault:
+    use: true
+    mode: set
+  cmdToReloadPermPlugin: manload
+  cmdOnRemoveVip: ''
+  commandsToRunOnVipFinish:
+  - nick {p} off
+  - manudel {p}
+  commandsToRunOnChangeVip: []
+  queueCmdsForOfflinePlayers: false
+  worldCmdsAllowed:
+  - world
+  - Arsalar
+bungee:
+  enableSync: false
+  serverID: server1
+apis:
+  pagseguro:
+    use: false
+    email: your@email.com
+    token: yourtoken
+    ignoreOldest: 05/06/2018
+  paypal:
+    use: false
+  commandIds:
+    '1': darvip {p} Vip1 15
+    '2': silk give {p} iron_golem 2
+    '3': eco give {p} 10000
+strings:
+  _pluginTag: '&7[&aMC&8-&cT&fR&7] '
+  noPlayersByName: '&cBu isimli oyuncu yok!'
+  onlyPlayers: '&cSadece oyuncular bu komudu kullanabilir!'
+  noKeys: '&aGeçerli bir anahtar yok! &6/newkey &ayada &6/newikey &ayazarak yenisini
+    yaratabilirsin.'
+  listKeys: '&aAnahtarların Listesi:'
+  listItemKeys: '&aEşya anahtarlarının listesi:'
+  vipInfoFor: '&aVIP Bilgi '
+  playerNotVip: '&cBu oyuncu VIP değil!'
+  moreThanZero: '&cBu sayı 0 dan büyük olmalı'
+  keyGenerated: '&aKey oluşturuldu:'
+  keySendTo: '&aAşağıdakileri içeren bir anahtar aldınız:'
+  invalidKey: '&cBu anahtar geçersiz!'
+  vipActivated: '&aVIP Başarıyla aktif edildi:'
+  usesLeftActivation: '&bBu anahtar bu kadar daha kullanılabilir: &6{uses}.'
+  activeVip: '&b- Vip: &6{vip}'
+  activeDays: '&b- Gün: &6{days} &bGün'
+  timeLeft: '&b- Kalan süre: &6'
+  totalTime: '&b- Gün: &6'
+  timeKey: '&b- Anahtar: &6'
+  hoverKey: '&7&o(Anahtarı almak için tıklayın)&r'
+  timeGroup: '&b- VIP: &6'
+  timeActive: '&b- Kullanımda: &6'
+  infoUses: '&b- Kalan: &6'
+  activeVipSetTo: '&aAktif VIP''in '
+  noGroups: '&cBu isimli bir grup yok '
+  days: ' &bGün'
+  hours: ' &bSaat'
+  minutes: ' &bDakika'
+  and: ' &bve'
+  vipEnded: ' &&6{vip} &bSüren bitti. &eUmarım VIP olduğun zamanlar eğlenmişsindir!'
+  lessThan: '&6VIP Sürenin bitmesine 1 dakikadan az zaman Kaldı...'
+  vipsRemoved: '&aOyuncunun VIP si silindi!'
+  vipSet: '&aOyuncuya başarıyla VIP verildi!'
+  sync-groups: '&aGrup ayarları bütün serverlara yollandı!'
+  list-of-vips: '&aAktif VIP ler: '
+  vipAdded: '&aOyuncuya başarıyla VIP eklendi!'
+  item: '&a-- Eşyalar: &b'
+  itemsGiven: '&aAnahtarla verilen eşyalar {items}.'
+  itemsAdded: '&aEşya anahtara eklendi:'
+  keyRemoved: '&aAnahtar başarıyla silindi: &b'
+  noKeyRemoved: '&cSilinebilecek bir anahtar yok!'
+  cmdNotAllowedWorld: '&cBu komuta bu dünyada izin verilmiyor!'
+  'true': '&atrue'
+  'false': '&cfalse'
+  reload: '&aPixelvip başarıyla yeniden yüklendi!'
+  pagseguro:
+    waiting: '&cPaypal: Satın alma işleminiz henüz onaylanmadı!'
+    codeused: '&cPaypal: Bu kod zaten kullanıldı!'
+    expired: '&cPaypal: Bu kodun süresi doldu!'
+    noitems: '&cPaypal: Hiçbir ürün teslim edilmedi. Size yardımcı olmak için bir
+      yöneticiye başvurun!'

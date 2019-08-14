@@ -1,0 +1,251 @@
+# EssentialsX new Kit configuration.
+# If you don't have any kits defined in this file, the plugin will try to copy them from the config.yml
+# 
+# Note: All items MUST be followed by a quantity!
+# All kit names should be lower case, and will be treated as lower in permissions/costs.
+# Syntax: - itemID[:DataValue/Durability] Amount [Enchantment:Level].. [itemmeta:value]...
+# For Item Meta information visit http://wiki.ess3.net/wiki/Item_Meta
+# 'delay' refers to the cooldown between how often you can use each kit, measured in seconds.
+# Set delay to -1 for a one time kit.
+# For more information, visit http://wiki.ess3.net/wiki/Kits
+kits:
+   acemi:
+    delay: 43200
+    items:
+    - 306 1 protection:3 unbreaking:1 name:&8&l»&7_&3Acemi&7_&8&l«
+    - 307 1 protection:3 unbreaking:1 name:&8&l»&7_&3Acemi&7_&8&l«
+    - 308 1 protection:3 unbreaking:1 name:&8&l»&7_&3Acemi&7_&8&l«
+    - 309 1 protection:3 unbreaking:1 name:&8&l»&7_&3Acemi&7_&8&l«
+    - 267 1 name:&8&l»&7_&3Acemi&7_&8&l«
+    - 258 1 name:&8&l»&7_&3Acemi&7_&8&l«
+    - 278 1 efficiency:3 unbreaking:1 name:&8&l»&7_&3Acemi&7_&8&l«
+    - 256 1 name:&8&l»&7_&3Acemi&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Acemi&7_&8&l«
+   çırak:
+    delay: 43200
+    items:
+    - 306 1 protection:3 unbreaking:1 name:&8&l»&7_&3Çırak&7_&8&l«
+    - 311 1 protection:3 unbreaking:1 name:&8&l»&7_&3Çırak&7_&8&l«
+    - 308 1 protection:3 unbreaking:1 name:&8&l»&7_&3Çırak&7_&8&l«
+    - 309 1 protection:3 unbreaking:1 name:&8&l»&7_&3Çırak&7_&8&l«
+    - 267 1 name:&8&l»&7_&3Çırak&7_&8&l«
+    - 258 1 name:&8&l»&7_&3Çırak&7_&8&l«
+    - 278 1 efficiency:4 unbreaking:1 name:&8&l»&7_&3Çırak&7_&8&l«
+    - 256 1 name:&8&l»&7_&3Çırak&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Çırak&7_&8&l«
+   oyuncu:
+    delay: 43200
+    items:
+    - 306 1 protection:3 unbreaking:1 name:&8&l»&7_&3Oyuncu&7_&8&l«
+    - 311 1 protection:3 unbreaking:1 name:&8&l»&7_&3Oyuncu&7_&8&l«
+    - 308 1 protection:3 unbreaking:1 name:&8&l»&7_&3Oyuncu&7_&8&l«
+    - 309 1 protection:3 unbreaking:1 name:&8&l»&7_&3Oyuncu&7_&8&l«
+    - 267 1 sharpness:2 name:&8&l»&7_&3Oyuncu&7_&8&l«
+    - 258 1 name:&8&l»&7_&3Oyuncu&7_&8&l«
+    - 278 1 efficiency:4 unbreaking:1 name:&8&l»&7_&3Oyuncu&7_&8&l«
+    - 256 1 name:&8&l»&7_&3Oyuncu&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Oyuncu&7_&8&l«
+   uzman:
+    delay: 43200
+    items:
+    - 306 1 protection:3 unbreaking:1 name:&8&l»&7_&3Uzman&7_&8&l«
+    - 311 1 protection:3 unbreaking:1 name:&8&l»&7_&3Uzman&7_&8&l«
+    - 308 1 protection:3 unbreaking:1 name:&8&l»&7_&3Uzman&7_&8&l«
+    - 309 1 protection:3 unbreaking:1 name:&8&l»&7_&3Uzman&7_&8&l«
+    - 267 1 sharpness:2 name:&8&l»&7_&3Uzman&7_&8&l«
+    - 258 1 name:&8&l»&7_&3Uzman&7_&8&l«
+    - 278 1 efficiency:4 unbreaking:3 name:&8&l»&7_&3Uzman&7_&8&l«
+    - 256 1 name:&8&l»&7_&3Uzman&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Uzman&7_&8&l« 
+   usta:
+    delay: 43200
+    items:
+    - 306 1 protection:3 unbreaking:1 name:&8&l»&7_&3Usta&7_&8&l«
+    - 311 1 protection:3 unbreaking:1 name:&8&l»&7_&3Usta&7_&8&l«
+    - 308 1 protection:3 unbreaking:1 name:&8&l»&7_&3Usta&7_&8&l«
+    - 309 1 protection:3 unbreaking:1 name:&8&l»&7_&3Usta&7_&8&l«
+    - 267 1 sharpness:2 name:&8&l»&7_&3Usta&7_&8&l«
+    - 258 1 efficiency:1 name:&8&l»&7_&3Usta&7_&8&l«
+    - 278 1 efficiency:5 unbreaking:3 name:&8&l»&7_&3Usta&7_&8&l«
+    - 256 1 efficiency:1 name:&8&l»&7_&3Usta&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Usta&7_&8&l«
+   asil:
+    delay: 43200
+    items:
+    - 310 1 protection:3 unbreaking:1 name:&8&l»&7_&3Asil&7_&8&l«
+    - 311 1 protection:3 unbreaking:1 name:&8&l»&7_&3Asil&7_&8&l«
+    - 308 1 protection:3 unbreaking:1 name:&8&l»&7_&3Asil&7_&8&l«
+    - 309 1 protection:3 unbreaking:1 name:&8&l»&7_&3Asil&7_&8&l«
+    - 267 1 sharpness:2 name:&8&l»&7_&3Asil&7_&8&l«
+    - 258 1 efficiency:1 name:&8&l»&7_&3Asil&7_&8&l«
+    - 278 1 efficiency:5 unbreaking:3 name:&8&l»&7_&3Asil&7_&8&l«
+    - 256 1 efficiency:1 name:&8&l»&7_&3Asil&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Asil&7_&8&l«
+   kahraman:
+    delay: 43200
+    items:
+    - 310 1 protection:3 unbreaking:1 name:&8&l»&7_&3Kahraman&7_&8&l«
+    - 311 1 protection:3 unbreaking:1 name:&8&l»&7_&3Kahraman&7_&8&l«
+    - 312 1 protection:3 unbreaking:1 name:&8&l»&7_&3Kahraman&7_&8&l«
+    - 309 1 protection:3 unbreaking:1 name:&8&l»&7_&3Kahraman&7_&8&l«
+    - 267 1 sharpness:3 name:&8&l»&7_&3Kahraman&7_&8&l«
+    - 258 1 efficiency:1 name:&8&l»&7_&3Kahraman&7_&8&l«
+    - 278 1 efficiency:5 unbreaking:3 name:&8&l»&7_&3Kahraman&7_&8&l«
+    - 256 1 efficiency:1 name:&8&l»&7_&3Kahraman&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Kahraman&7_&8&l«
+   efsanevi:
+    delay: 43200
+    items:
+    - 310 1 protection:3 unbreaking:1 name:&8&l»&7_&3Efsanevi&7_&8&l«
+    - 311 1 protection:3 unbreaking:1 name:&8&l»&7_&3Efsanevi&7_&8&l«
+    - 312 1 protection:3 unbreaking:1 name:&8&l»&7_&3Efsanevi&7_&8&l«
+    - 313 1 protection:3 unbreaking:1 name:&8&l»&7_&3Efsanevi&7_&8&l«
+    - 267 1 sharpness:3 name:&8&l»&7_&3Efsanevi&7_&8&l«
+    - 258 1 efficiency:1 name:&8&l»&7_&3Efsanevi&7_&8&l«
+    - 278 1 efficiency:5 unbreaking:3 name:&8&l»&7_&3Efsanevi&7_&8&l«
+    - 256 1 efficiency:1 name:&8&l»&7_&3Efsanevi&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Efsanevi&7_&8&l«
+   vezir:
+    delay: 43200
+    items:
+    - 310 1 protection:3 unbreaking:1 name:&8&l»&7_&3Vezir&7_&8&l«
+    - 311 1 protection:3 unbreaking:1 name:&8&l»&7_&3Vezir&7_&8&l«
+    - 312 1 protection:3 unbreaking:1 name:&8&l»&7_&3Vezir&7_&8&l«
+    - 313 1 protection:3 unbreaking:1 name:&8&l»&7_&3Vezir&7_&8&l«
+    - 276 1 sharpness:3 name:&8&l»&7_&3Vezir&7_&8&l«
+    - 258 1 efficiency:1 name:&8&l»&7_&3Vezir&7_&8&l«
+    - 278 1 efficiency:5 unbreaking:3 name:&8&l»&7_&3Vezir&7_&8&l«
+    - 256 1 efficiency:1 name:&8&l»&7_&3Vezir&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Vezir&7_&8&l«
+   kral:
+    delay: 43200
+    items:
+    - 310 1 protection:3 unbreaking:1 name:&8&l»&7_&3Kral&7_&8&l«
+    - 311 1 protection:3 unbreaking:1 name:&8&l»&7_&3Kral&7_&8&l«
+    - 312 1 protection:3 unbreaking:1 name:&8&l»&7_&3Kral&7_&8&l«
+    - 313 1 protection:3 unbreaking:1 name:&8&l»&7_&3Kral&7_&8&l«
+    - 276 1 sharpness:3 name:&8&l»&7_&3Kral&7_&8&l«
+    - 279 1 efficiency:1 name:&8&l»&7_&3Kral&7_&8&l«
+    - 278 1 efficiency:5 unbreaking:3 name:&8&l»&7_&3Kral&7_&8&l«
+    - 277 1 efficiency:1 name:&8&l»&7_&3Kral&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Kral&7_&8&l«
+   imparator:
+    delay: 43200
+    items:
+    - 310 1 protection:3 unbreaking:1 name:&8&l»&7_&3Imparator&7_&8&l«
+    - 311 1 protection:4 unbreaking:1 name:&8&l»&7_&3Imparator&7_&8&l«
+    - 312 1 protection:3 unbreaking:1 name:&8&l»&7_&3Imparator&7_&8&l«
+    - 313 1 protection:3 unbreaking:1 name:&8&l»&7_&3Imparator&7_&8&l«
+    - 276 1 sharpness:3 name:&8&l»&7_&3Imparator&7_&8&l«
+    - 279 1 efficiency:2 name:&8&l»&7_&3Imparator&7_&8&l«
+    - 278 1 efficiency:5 unbreaking:3 name:&8&l»&7_&3Imparator&7_&8&l«
+    - 277 1 efficiency:1 name:&8&l»&7_&3Imparator&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Imparator&7_&8&l«
+   profesyonel:
+    delay: 43200
+    items:
+    - 310 1 protection:3 unbreaking:1 name:&8&l»&7_&3Profesyonel&7_&8&l«
+    - 311 1 protection:4 unbreaking:1 name:&8&l»&7_&3Profesyonel&7_&8&l«
+    - 312 1 protection:4 unbreaking:1 name:&8&l»&7_&3Profesyonel&7_&8&l«
+    - 313 1 protection:3 unbreaking:1 name:&8&l»&7_&3Profesyonel&7_&8&l«
+    - 276 1 sharpness:3 name:&8&l»&7_&3Profesyonel&7_&8&l«
+    - 279 1 efficiency:3 name:&8&l»&7_&3Profesyonel&7_&8&l«
+    - 278 1 efficiency:5 unbreaking:3 name:&8&l»&7_&3Profesyonel&7_&8&l«
+    - 277 1 efficiency:2 name:&8&l»&7_&3Profesyonel&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Profesyonel&7_&8&l«
+   zengin:
+    delay: 43200
+    items:
+    - 310 1 protection:4 unbreaking:1 name:&8&l»&7_&3Zengin&7_&8&l«
+    - 311 1 protection:4 unbreaking:1 name:&8&l»&7_&3Zengin&7_&8&l«
+    - 312 1 protection:4 unbreaking:1 name:&8&l»&7_&3Zengin&7_&8&l«
+    - 313 1 protection:3 unbreaking:1 name:&8&l»&7_&3Zengin&7_&8&l«
+    - 276 1 sharpness:4 name:&8&l»&7_&3Zengin&7_&8&l«
+    - 279 1 efficiency:3 name:&8&l»&7_&3Zengin&7_&8&l«
+    - 278 1 efficiency:5 unbreaking:3 name:&8&l»&7_&3Zengin&7_&8&l«
+    - 277 1 efficiency:3 name:&8&l»&7_&3Zengin&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Zengin&7_&8&l«
+   emekli:
+    delay: 43200
+    items:
+    - 310 1 protection:4 unbreaking:1 name:&8&l»&7_&3Emekli&7_&8&l«
+    - 311 1 protection:4 unbreaking:1 name:&8&l»&7_&3Emekli&7_&8&l«
+    - 312 1 protection:4 unbreaking:1 name:&8&l»&7_&3Emekli&7_&8&l«
+    - 313 1 protection:4 unbreaking:1 name:&8&l»&7_&3Emekli&7_&8&l«
+    - 276 1 sharpness:4 name:&8&l»&7_&3Emekli&7_&8&l«
+    - 279 1 efficiency:3 name:&8&l»&7_&3Emekli&7_&8&l«
+    - 278 1 efficiency:5 unbreaking:3 name:&8&l»&7_&3Emekli&7_&8&l«
+    - 277 1 efficiency:3 name:&8&l»&7_&3Emekli&7_&8&l«
+    - 364 15 name:&8&l»&7_&3Emekli&7_&8&l«
+   rehber:
+    delay: 43200
+    items:
+    - 310 1 protection:5 unbreaking:3 name:&8&l»&7_&eRehber&7_&8&l«
+    - 311 1 protection:5 unbreaking:3 name:&8&l»&7_&eRehber&7_&8&l«
+    - 312 1 protection:5 unbreaking:3 name:&8&l»&7_&eRehber&7_&8&l«
+    - 313 1 protection:5 unbreaking:3 name:&8&l»&7_&eRehber&7_&8&l«
+    - 276 1 sharpness:5 name:&8&l»&7_&eRehber&7_&8&l«
+    - 279 1 efficiency:4 name:&8&l»&7_&eRehber&7_&8&l«
+    - 278 1 efficiency:5 unbreaking:3 name:&8&l»&7_&eRehber&7_&8&l«
+    - 277 1 efficiency:5 name:&8&l»&7_&eRehber&7_&8&l«
+    - 364 15 name:&8&l»&7_&eRehber&7_&8&l«
+   youtuber:
+    delay: 86400
+    items:
+    - 310 1 protection:4 unbreaking:3 name:&8&l»&7_&4You&fTuber&7_&8&l«
+    - 311 1 protection:5 unbreaking:3 name:&8&l»&7_&4You&fTuber&7_&8&l«
+    - 312 1 protection:5 unbreaking:3 name:&8&l»&7_&4You&fTuber&7_&8&l«
+    - 313 1 protection:4 unbreaking:3 name:&8&l»&7_&4You&fTuber&7_&8&l«
+    - 276 1 sharpness:5 name:&8&l»&7_&4You&fTuber&7_&8&l«
+    - 279 1 efficiency:4 name:&8&l»&7_&4You&fTuber&7_&8&l«
+    - 278 1 efficiency:5 unbreaking:3 name:&8&l»&7_&4You&fTuber&7_&8&l«
+    - 277 1 efficiency:4 name:&8&l»&7_&4You&fTuber&7_&8&l«
+    - 364 15 name:&8&l»&7_&4You&fTuber&7_&8&l«
+   vip:
+    delay: 86400
+    items:
+    - 310 1 protection:6 unbreaking:3 name:&8&l»&7_&bVIP&7_&8&l«
+    - 311 1 protection:6 unbreaking:3 name:&8&l»&7_&bVIP&7_&8&l«
+    - 312 1 protection:6 unbreaking:3 name:&8&l»&7_&bVIP&7_&8&l«
+    - 313 1 protection:6 unbreaking:3 name:&8&l»&7_&bVIP&7_&8&l«
+    - 276 1 sharpness:5 name:&8&l»&7_&bVIP&7_&8&l«
+    - 279 1 efficiency:5 name:&8&l»&7_&bVIP&7_&8&l«
+    - 278 1 efficiency:5 unbreaking:3 name:&8&l»&7_&bVIP&7_&8&l«
+    - 277 1 efficiency:5 name:&8&l»&7_&bVIP&7_&8&l«
+    - 364 15 name:&8&l»&7_&bVIP&7_&8&l«
+   vip+:
+    delay: 86400
+    items:
+    - 310 1 protection:6 unbreaking:3 name:&8&l»&7_&bVIP&c+&7_&8&l«
+    - 311 1 protection:7 unbreaking:3 name:&8&l»&7_&bVIP&c+&7_&8&l«
+    - 312 1 protection:7 unbreaking:3 name:&8&l»&7_&bVIP&c+&7_&8&l«
+    - 313 1 protection:6 unbreaking:3 name:&8&l»&7_&bVIP&c+&7_&8&l«
+    - 276 1 sharpness:5 name:&8&l»&7_&bVIP&c+&7_&8&l«
+    - 279 1 efficiency:5 name:&8&l»&7_&bVIP&c+&7_&8&l«
+    - 278 1 efficiency:6 unbreaking:3 name:&8&l»&7_&bVIP&c+&7_&8&l«
+    - 277 1 efficiency:5 name:&8&l»&7_&bVIP&c+&7_&8&l«
+    - 364 15 name:&8&l»&7_&bVIP&c+&7_&8&l«
+   mvip:
+    delay: 86400
+    items:
+    - 310 1 protection:7 unbreaking:3 name:&8&l»&7_&6MVIP&7_&8&l«
+    - 311 1 protection:7 unbreaking:3 name:&8&l»&7_&6MVIP&7_&8&l«
+    - 312 1 protection:7 unbreaking:3 name:&8&l»&7_&6MVIP&7_&8&l«
+    - 313 1 protection:7 unbreaking:3 name:&8&l»&7_&6MVIP&7_&8&l«
+    - 276 1 sharpness:5 name:&8&l»&7_&6MVIP&7_&8&l«
+    - 279 1 efficiency:5 name:&8&l»&7_&6MVIP&7_&8&l«
+    - 278 1 efficiency:8 unbreaking:3 name:&8&l»&7_&6MVIP&7_&8&l«
+    - 277 1 efficiency:5 name:&8&l»&7_&6MVIP&7_&8&l«
+    - 364 15 name:&8&l»&7_&6MVIP&7_&8&l«
+   mvip+:
+    delay: 86400
+    items:
+    - 310 1 protection:7 unbreaking:3 name:&8&l»&7_&6MVIP&4+&7_&8&l«
+    - 311 1 protection:8 unbreaking:3 name:&8&l»&7_&6MVIP&4+&7_&8&l«
+    - 312 1 protection:7 unbreaking:3 name:&8&l»&7_&6MVIP&4+&7_&8&l«
+    - 313 1 protection:7 unbreaking:3 name:&8&l»&7_&6MVIP&4+&7_&8&l«
+    - 276 1 sharpness:6 name:&8&l»&7_&6MVIP&4+&7_&8&l«
+    - 279 1 efficiency:5 name:&8&l»&7_&6MVIP&4+&7_&8&l«
+    - 278 1 efficiency:9 unbreaking:3 name:&8&l»&7_&6MVIP&4+&7_&8&l«
+    - 277 1 efficiency:5 name:&8&l»&7_&6MVIP&4+&7_&8&l«
+    - 364 15 name:&8&l»&7_&6MVIP&4+&7_&8&l«

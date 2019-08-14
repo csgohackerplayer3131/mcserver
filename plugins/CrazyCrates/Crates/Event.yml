@@ -1,0 +1,84 @@
+﻿Crate:
+  CrateType: CSGO
+  CrateName: '&eEvent &fkasa'
+  StartingKeys: 0
+  InGUI: true
+  Slot: 12
+  OpeningBroadCast: false
+  BroadCast: ''
+  Item: '54'
+  Name: '&eEvent &fkasa'
+  Lore:
+  - ''
+  PhysicalKey:
+    Name: '&eEvent &fkasa &7anahtarı'
+    Lore:
+    - '&a&oBu anahtarı &7/warp kasa &a&oda açabilirsiniz.'
+    Item: '131'
+    Glowing: true
+  Prizes:
+    '1':
+      DisplayName: '&b1 Tane Günlük Kasa Anahtarı '
+      DisplayItem: '131'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%5'
+      MaxRange: 100
+      Chance: 5
+      Firework: true
+      Glowing: false
+      Commands:
+        - 'crazycrate give physical günlük 1 %Player% '
+    '2':
+      DisplayName: '&bSüpriz Kutu'
+      DisplayItem: '54'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%10'
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: false
+      Items:
+        - 'Item:54, Amount:1, Name:&bSüpriz Kutu'
+    '3':
+      DisplayName: '&e100K Oyun Parası '
+      DisplayItem: '371'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%4'
+      MaxRange: 100
+      Chance: 4
+      Firework: true
+      Glowing: false
+      Commands:
+        - 'eco give %Player% 100000 '
+    '4':
+      DisplayName: '&e500K Oyun Parası '
+      DisplayItem: '371'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%3'
+      MaxRange: 100
+      Chance: 3
+      Firework: true
+      Glowing: false
+      Commands:
+        - 'eco give %Player% 500000 '
+    '5':
+      DisplayName: '&e1M Oyun Parası '
+      DisplayItem: '371'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%1'
+      MaxRange: 100
+      Chance: 1
+      Firework: true
+      Glowing: false
+      Commands:
+        - 'eco give %Player% 1000000 '

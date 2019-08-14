@@ -1,0 +1,12 @@
+# This is official config file for plugin messages.
+# 
+# Prefix for everything in this plugin
+Prefix: '&aMC&8-&cT&fR &8»'
+message-when-won: '&e%Prize%$ &7kazandın!'
+message-when-lost: '&7Kaybettin!'
+purchase-message: '&7Sihirli su satın aldınız, &e%Purchase%&7.'
+gui-open-while-holding-potion: '&7Elinde sihirli su varken menü açamazsın!'
+not-enough-money: '&7Bu sihirli suyu almak için yeterli paran yok!'
+not-enough-space: '&7Envanterin dolu!'
+no-permission: '&7Bunu yapmaya izniniz yok!'
+win-broadcast: '&e%Player% %Potion% &7içerek &e%Prize%$ &7kazandı! Sen de denemek için &e/sihirlisu&7.'

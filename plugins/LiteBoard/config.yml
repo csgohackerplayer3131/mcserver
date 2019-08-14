@@ -1,0 +1,29 @@
+#-------------------------------------------------------------------------------------------
+#
+#                                       LiteBoard
+#
+#                       A advanced animated FREE scoreboard plugin <3
+#
+#-------------------------------------------------------------------------------------------
+
+# First,you should know,I am Chinese,and I am not good at English
+# And I am lazy to use Google Translator
+# So,the plugin may contains many language mistakes
+# If you find any language mistakes,you can report it to me at Discord
+# Thank you very much!
+
+# Plugin Stats: https://bstats.org/plugin/bukkit/LiteBoard
+# Discord Server: https://discord.gg/qhf3jk
+
+#This is default config which generate by LiteBoard Version: 3.0.6
+#Config Version (Don't touch this if you dont know what is it)
+config_ver: 1
+
+
+#Async Board
+#Run the LiteBoard on Async Thread,it will not lag your server
+#But if you have any problems with async task,you can set to false
+async: true
+
+#Check Plugin Update
+update: true

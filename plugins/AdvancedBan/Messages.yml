@@ -1,0 +1,227 @@
+General:
+  Prefix: "&aMC&8-&cT&fR &8»"
+  NoPerms: "&7Yetkin yok!"
+  LayoutNotFound: "&f%NAME% &7adlı oyuncu kayıtlı değil!"
+  TimeLayoutD: "%D% Gün %H% Saat %M% Dakika ve %S% Saniye"
+  TimeLayoutH: "%H% Saat %M% Dakika ve %S% Saniye"
+  TimeLayoutM: "%M% Dakika ve %S% Saniye"
+  TimeLayoutS: "%S% Saniye"
+  FailedFetch: "&3%NAME%! &cBeklenmedik bir hata oluştu yetkiliyle iletişime geçin!"
+
+Ban:
+  Usage: "&cKullanımı&8: &7&o/ban [Oyuncu] [Sebep]"
+  Done: "&3%NAME% &7Başarıyla sunucudan banlandı!"
+  AlreadyDone: "&3%NAME% &7Zaten banlı!"
+  Exempt: "&4%NAME% &7adlı yetkiyi banlayamazsın"
+  Layout:
+  - "%PREFIX%"
+  - "&4Sunucudan süresiz banlandın!"
+  - '&7'
+  - "&9Banlayan&8: &f%OPERATOR%"
+  - "&9Sebep&8: &f%REASON%"
+  - "&9Banlanma zamanı&8: &f%DATE%"
+  - '&7'
+  Notification:
+  - "&3%NAME% , &c%OPERATOR% &7Tarafından banlandı"
+
+Tempban:
+  Usage: "&cKullanımı&8: &7&o/tempban [Oyuncu] [m(Dakika)/d(Gün)/h(Saat)/s(Saniye)/] [Sebep]"
+  MaxDuration: "&cBu kadar saniye banlamak mümkün değil %MAX% saniye"
+  Layout:
+  - "%PREFIX%"
+  - "&4Sunucudan süreli banlandın!"
+  - '&7'
+  - "&9Banlayan&8: &f%OPERATOR%"
+  - "&9Sebep&8: &f%REASON%"
+  - "&9Açılma Zamanı&8: &f%DURATION%"
+  - "&9Banlanma zamanı&8: &f%DATE%"
+  - '&7'
+  Notification:
+  - "&3%NAME% , &c%OPERATOR% &7Tarafından banlandı"
+
+Ipban:
+  Usage: "&cKullanımı&8: &7&o/banip [Oyuncu] [Sebep]"
+  Layout:
+  - "%PREFIX%"
+  - "&4Sunucudan IP banlandın"
+  - '&7'
+  - "&9Banlayan&8: &f%OPERATOR%"
+  - "&9Sebep&8: &f%REASON%"
+  - "&9Banlanma zamanı&8: &f%DATE%"
+  - '&7'
+  Notification:
+  - "&3%NAME% , &c%OPERATOR% &7Tarafından banlandı"
+  IpNotCashed: "&3%NAME% &7adlı oyuncu için kayıtlı bir ıp yok!"
+
+Tempipban:
+  Usage: "&cKullanımı&8: &7&o/tempban [Oyuncu] [m(Dakika)/d(Gün)/h(Saat)/s(Saniye)/] [Sebep]"
+  MaxDuration: "&cBu kadar saniye banlamak mümkün değil %MAX% saniye"
+  Layout:
+  - "%PREFIX%"
+  - "&4Sunucudan süreli IP banlandın!"
+  - '&7'
+  - "&9Banlayan&8: &f%OPERATOR%"
+  - "&9Sebep&8: &f%REASON%"
+  - "&9Açılma Zamanı&8: &f%DURATION%"
+  - "&9Banlanma zamanı&8: &f%DATE%"
+  - '&7'
+  Notification:
+  - "&3%NAME% , &c%OPERATOR% &7Tarafından banlandı"
+
+Kick:
+  Usage: "&cKullanımı&8: &7&o/kick [Oyuncu] [Sebep]"
+  Done: "&3%NAME% &7Başarıyla atıldı!"
+  NotOnline: "&3%NAME% &7sunucuda değil!"
+  Exempt: "&7You are not able to kick &c&o%NAME%"
+  Layout:
+  - "%PREFIX%"
+  - "&4Sunucudan Atıldın!"
+  - '&7'
+  - "&9Atan&8: &f%OPERATOR%"
+  - "&9Sebep&8: &f%REASON%"
+  - "&9Atılma zamanı&8: &f%DATE%"
+  - '&7'
+  Notification:
+  - "&3%NAME% , &c%OPERATOR% &7Tarafından atıldı"
+
+Mute:
+  Usage: "&cKullanımı&8: &7&o/mute [Oyuncu] [Sebep]"
+  Done: "&3%NAME% &7Başarıyla susturuldu!"
+  AlreadyDone: "&3%NAME% &7Zaten susturulmuş!"
+  Exempt: "&4%NAME% &7adlı yetkiyi mute atamazsın."
+  Layout:
+  - '%PREFIX%'
+  - "&4Sunucudan süresiz olarak susturuldun!"
+  - '&7'
+  - "&9Susturan&8: &f%OPERATOR%"
+  - "&9Sebep&8: &f%REASON%"
+  - "&9Susturma zamanı&8: &f%DATE%"
+  Notification:
+  - "&3%NAME% , &c%OPERATOR% &7Tarafından susturuldu."
+
+Tempmute:
+  Usage: "&cKullanımı&8: &7&o/tempban [Oyuncu] [m(Dakika)/d(Gün)/h(Saat)/s(Saniye)/] [Sebep]"
+  MaxDuration: "&cDaha fazla %MAX% saniye atamazsın."
+  Layout:
+  - '%PREFIX%'
+  - "&4Sunucudan süreli olarak susturuldun!"
+  - '&7'
+  - "&9Susturan&8: &f%OPERATOR%"
+  - "&9Sebep&8: &f%REASON%"
+  - "&9Susturma zamanı&8: &f%DATE%"
+  - "&9Susturma açılma zamanı&8: &f%DURATION%"
+  - '&7'
+  Notification:
+  - "&9%NAME% , &9%OPERATOR% &7Tarafından susturuldu."
+
+Warn:
+  Usage: "&cKullanımı&8: &7&o/warn [Oyuncu] [Sebep/@Layout]"
+  Done: "&3%NAME% &7Başarıyla uyarıldı!"
+  Exempt: "&4%NAME% &cUyaramazsın."
+  Layout:
+  - '%PREFIX% &cBir uyarı aldın.'
+  - "&7Sebep&8: &f%REASON%"
+  - '&7Şimdi toplam &c&o%COUNT% &7uyarınız bulunmakta!'
+  Notification:
+  - "&9%NAME% , &9%OPERATOR% &7Tarafından uyarıldı."
+
+Tempwarn:
+  Usage: "&cKullanımı&8: &7&o/tempwarn [Oyuncu] [Xmo/Xd/Xh/Xm/Xs] [Sebep/@Layout]"
+  MaxDuration: "&cDaha fazla uyarı veremezsin. Maksimum: %MAX%"
+  Layout:
+  - '%PREFIX% &cGeçici uyarı aldınız.'
+  - "&7Sebep&8: &f%REASON%"
+  - '&7Şimdi toplam &c&o%COUNT% &7uyarınız bulunmakta!'
+  Notification:
+  - "&9%NAME% , &9%OPERATOR% &7Tarafından geçici uyarıldı."
+
+UnWarn:
+  Usage: "&cKullanımı&8: &7&o/unwarn [ID] /unwarn clear [Oyuncu]"
+  NotFound: "#%ID% &cUyarılı değil"
+  Done: "&3#%ID% &7Başarıyla uyarıları silindi."
+  Clear:
+    Empty: "&3%NAME% &7Uyarısı yok!"
+    Done: "&3%COUNT% &7Başarıyla uyarıları silindi."
+    
+UnBan:
+  Usage: "&cKullanımı&8: &7&o/unban [Oyuncu/IP]"
+  NotPunished: "&9%NAME% &7Banlı değil!"
+  Done: "&3%NAME% &7Başarıyla banı kaldırıldı!"
+
+UnMute:
+  Usage: "&cKullanımı&8: &7&o/unmute [Oyuncu]"
+  NotPunished: "&9%NAME% &7Muteli değil!"
+  Done: "&3%NAME% &7Başarıyla mutesi kaldırıldı!"
+
+UnPunish:
+  Usage: "&cKullanımı&8: &7&o/unpunish [ID]"
+  NotFound: "&cBulununamadı #%ID%"
+  Done: "&7Ceza &a&o#%ID% &7Başarıyla kaldırıldı!"
+Banlist:
+  Usage: "&cKullanımı&8: &7&o/banlist <Page>"
+  OutOfIndex: "&cSayfa yok %PAGE%!"
+  NoEntries: "&c&oHiçbir kayıt yok"
+  Header:
+  - "%PREFIX% &7Banliste:"
+  - "&9Oyuncu/IP &8| &9Süre &8| &9Banlayan"
+  - "&9Tip &8> &9Sebep"
+  - '&7'
+  Entry:
+  - "&8[&e%DATE%&8]"
+  - "&f%NAME% &8| &f%DURATION% &8| &f%OPERATOR%"
+  - "&f%TYPE% &8> &f%REASON%"
+  - '&7'
+  Footer: "&7Sayfa &e&o%CURRENT_PAGE% &e&o%TOTAL_PAGES% &8| &7Banlar listesi: &e&o%COUNT%"
+  PageFooter: "&7Diğer sayfa &e&o/banlist %NEXT_PAGE%"
+
+History:
+  Usage: "&cKullanımı&8: &7&o/history [Oyuncu/IP] <Page>"
+  OutOfIndex: "&cSayfa yok %PAGE%!"
+  NoEntries: "&3%NAME% &7Geçmişi bulunamadı :("
+  Header:
+  - "%PREFIX% &9%NAME% &7Geçmişi:"
+  - "&9Ad &8| &9Süre &8| &9Banlayan"
+  - "&9Tip &8> &fSebep"
+  - "&7"
+  Entry:
+  - "&8[&e%DATE%&8]"
+  - "&f%NAME% &8| &f%DURATION% &8| &f%OPERATOR%"
+  - "&f%TYPE% &8> &f%REASON%"
+  - "&7"
+  Footer: "&e&o%CURRENT_PAGE% &7of &e&o%TOTAL_PAGES% &8| &7Toplam ceza: &e&o%COUNT%"
+  PageFooter: "&e&o/history %NAME% %NEXT_PAGE%"
+
+Warns:
+  Usage: "&cKullanım &8\xbb &7&o/warns [Oyuncu] <Page>"
+  OutOfIndex: "&cSayfa yok %PAGE%!"
+  NoEntries: "&3%NAME% &cHenüz uyarısı yok"
+  Header:
+  - "%PREFIX% %NAME% &7Uyarı:"
+  - "&c&oOyuncu &8| &e&oSüre &8| &7&oUyaran"
+  - "&c&o#ID &8> &7&oSebep"
+  - "&7"
+  Entry:
+  - "&8[&e%DATE%&8]"
+  - "&c%NAME% &8| &e%DURATION% &8| &7%OPERATOR%"
+  - "&c&l#%ID% &8> &7&o%REASON%"
+  - "&7"
+  Footer: "&7Page &e&o%CURRENT_PAGE% &7of &e&o%TOTAL_PAGES% &8| &7Active warnings: &e&o%COUNT%"
+  PageFooter: "&7Use &e&o/warns %NAME% %NEXT_PAGE% &7to see the next page"
+
+ChangeReason:
+  Usage: "&cKullanım &8\xbb &7&o/change-reason [ID or ban/mute USER] [Sebep]"
+  Done: "&a&o#%ID% &7Ceza güncellendi!"
+  NotFound: "&cÜzgünüz, bu cezayı bulamadık."
+
+Check:
+  Usage: "&cKullanım &8\xbb &7&o/check [Oyuncu]"
+  Header: "&7Kontrol ediliyor &e&o%NAME%"
+  UUID: "&cUUID &8\xbb &7%UUID%"
+  IP: "&cIP &8\xbb &7%IP%"
+  Geo: "&cYer &8\xbb &7%LOCATION%"
+  Mute: "&cMute &8\xbb &7%DURATION%"
+  MuteReason: "  &cReason &8\xbb &7%REASON%"
+  Ban: "&cBan &8\xbb &7%DURATION%"
+  BanReason: "  &cReason &8\xbb &7%REASON%"
+  Warn: "&cUyarı &8\xbb &7%COUNT%"
+  NotFound: "&3%NAME% &cAdlı oyuncunun bilgileri bulunamadı."

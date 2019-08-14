@@ -1,0 +1,145 @@
+﻿Crate:
+  CrateType: Roulette
+  CrateName: '&bVIP &fkasa'
+  StartingKeys: 0
+  InGUI: true
+  Slot: 12
+  OpeningBroadCast: false
+  BroadCast: ''
+  Item: '54'
+  Name: '&3Eşya kasa'
+  Lore:
+  - ''
+  PhysicalKey:
+    Name: '&bVIP &fkasa &7anahtarı'
+    Lore:
+    - '&a&oBu anahtarı &7/warp kasa &a&oda açabilirsiniz.'
+    Item: '131'
+    Glowing: true
+  Prizes:
+    1:
+      DisplayName: '&3Koruma 25 Kafalık'
+      DisplayItem: '310'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%10'
+      DisplayEnchantments:
+        - 'PROTECTION_ENVIRONMENTAL:25'
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: false
+      Items:
+        - 'Item:310, Amount:1, Name:&3Koruma 25 Kafalık, PROTECTION_ENVIRONMENTAL:25'
+    2:
+      DisplayName: '&3Koruma 25 Göğüslük'
+      DisplayItem: '311'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%10'
+      DisplayEnchantments:
+        - 'PROTECTION_ENVIRONMENTAL:25'
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: false
+      Items:
+        - 'Item:311, Amount:1, Name:&3Koruma 25 Göğüslük, PROTECTION_ENVIRONMENTAL:25'
+    3:
+      DisplayName: '&3Koruma 25 Pantalon'
+      DisplayItem: '312'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%10'
+      DisplayEnchantments:
+        - 'PROTECTION_ENVIRONMENTAL:25'
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: false
+      Items:
+        - 'Item:312, Amount:1, Name:&3Koruma 25 Pantalon, PROTECTION_ENVIRONMENTAL:25'
+    4:
+      DisplayName: '&3Koruma 25 Bot'
+      DisplayItem: '313'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%10'
+      DisplayEnchantments:
+        - 'PROTECTION_ENVIRONMENTAL:25'
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: false
+      Items:
+        - 'Item:313, Amount:1, Name:&3Koruma 25 Bot, PROTECTION_ENVIRONMENTAL:25'
+    5:
+      DisplayName: '&cv25 &bKılıç'
+      DisplayItem: '276'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%10'
+      DisplayEnchantments:
+        - 'FIRE_ASPECT:3'
+        - 'UNBREAKING:3'
+        - 'SHARPNESS:25'
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: false
+      Items:
+        - 'Item:276, Amount:1, Name:&cv25 &bKılıç, SHARPNESS:25, FIRE_ASPECT:3, UNBREAKING:3'
+    6:
+      DisplayName: '&cV15 &bKazma'
+      DisplayItem: '278'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%10'
+      DisplayEnchantments:
+        - 'Efficiency:15'
+        - 'UNBREAKING:3'
+        - 'Silk Touch:1'
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: false
+      Items:
+        - 'Item:278, Amount:1, Name:&cV15 &bKazma, UNBREAKING:3, Efficiency:15, Silk Touch 1'
+    7:
+      DisplayName: '&cV10 &bBalta'
+      DisplayItem: '279'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%10'
+      DisplayEnchantments:
+        - 'Efficiency:10'
+        - 'UNBREAKING:3'
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: false
+      Items:
+        - 'Item:279, Amount:1, Name:&cV10 &bBalta, UNBREAKING:3, Efficiency:10'
+    8:
+      DisplayName: '&cV10 &bKürek'
+      DisplayItem: '277'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%10'
+      DisplayEnchantments:
+        - 'Efficiency:10'
+        - 'UNBREAKING:3'
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: false
+      Items:
+        - 'Item:277, Amount:1, Name:&cV10 &bKürek, UNBREAKING:3, Efficiency:10'

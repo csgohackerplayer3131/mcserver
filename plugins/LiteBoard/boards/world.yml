@@ -1,0 +1,63 @@
+#Example Main Board
+#You can create your board by creating a .yml file and put it into "boards" folder
+#And this is a example that how to config a board
+
+
+#First,You need to set the board title
+title:
+  #Update Title Time(tick)
+  time: 3
+  #Frames
+  frames:
+  - '&aMC&8-&cT&fR'
+
+#Lines
+lines:
+  #Update Frames Timer(tick)
+  time: 20
+  #Animated Lines
+  lines:
+    zaman:
+    - '&7%server_time_dd/MM/yy HH:mm:ss%'
+    bos:
+    - ''
+    isim:
+    - '&7» &fIsim &8► &e%player_name%'
+    yetkin:
+    - '&7» &fRütbe &8► &e%vault_rank%'
+    para:
+    - '&7» &fBütçe &8► &e%vault_eco_balance_formatted%'
+    klan:
+    - '&7» &fKlan &8► &e%factions_faction%'
+    öldürme:
+    - '&7» &fÖldürme &8► &e%statistic_player_kills%'
+    ölme:
+    - '&7» &fÖlme &8► &e%statistic_deaths%'
+    ping:
+    - '&7» &fPing &8► &e%ping%'
+    bos1:
+    - ''
+    sunucu:
+    - '&7» &fSunucu &8► &eFaction'
+    çevrimiçi:
+    - '&7» &fÇevrimiçi &8► &e%server_online%'
+    bos2:
+    - ''
+    ip:
+    - '&awww.mc-tr.com'
+#Enable Worlds
+worlds:
+- 'world'
+- 'Arsalar'
+
+#Event Trigger Board
+#What is event trigger board?
+#It is a board which will be showed to player that triggered some events
+event_trigger:
+  #Enable this feature for this board?
+  enable: false
+  #Trigger Time (tick)
+  time: 100
+  #Trigger Events
+  events:
+  - 'PlayerChatEvent'

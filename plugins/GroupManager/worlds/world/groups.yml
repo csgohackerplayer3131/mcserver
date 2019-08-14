@@ -1,0 +1,476 @@
+# Group inheritance
+#
+# Any inherited groups prefixed with a g: are global groups
+# and are inherited from the GlobalGroups.yml.
+#
+# Groups without the g: prefix are groups local to this world
+# and are defined in the this groups.yml file.
+#
+# Local group inheritances define your promotion tree when using 'manpromote/mandemote'
+
+groups:
+  tumyetkiler:
+    default: false
+    permissions:
+    - authme.player.*
+    - AutoPickup.enabled
+    - bottlebets.openbar
+    - chestcommands.open.bilgi.yml
+    - chestcommands.open.kit.yml
+    - chestcommands.open.vipbilgi.yml
+    - chestcommands.open.warp.yml
+    - ChestShop.shop.*
+    - coinflipper.create
+    - coinflipper.gui
+    - coinflipper.stats
+    - deluxemenus.menu.*
+    - essentials.balance
+    - essentials.chat.question
+    - essentials.chat.shout
+    - essentials.delhome
+    - essentials.ec
+    - essentials.enderchest
+    - essentials.help
+    - essentials.home
+    - essentials.ignore
+    - essentials.kit
+    - essentials.list
+    - essentials.money
+    - essentials.motd
+    - essentials.msg
+    - essentials.oversizedstacks
+    - essentials.pay
+    - essentials.rules
+    - essentials.sethome
+    - essentials.signs.use.buy
+    - essentials.signs.use.sell
+    - essentials.spawn
+    - essentials.tpa
+    - essentials.tpaccept
+    - essentials.tpahere
+    - essentials.tpdeny
+    - essentials.tptoggle
+    - essentials.url
+    - essentials.warp
+    - essentials.warp.list
+    - factions.autoclaim
+    - factions.chat
+    - factions.claim
+    - factions.deinvite
+    - factions.description
+    - factions.help
+    - factions.home
+    - factions.invite
+    - factions.join
+    - factions.kick
+    - factions.leave
+    - factions.list
+    - factions.map
+    - factions.mod
+    - factions.open
+    - factions.power
+    - factions.sethome
+    - factions.show
+    - factions.tag
+    - factions.title
+    - factions.unclaim
+    - factions.unclaimall
+    - guibalance.use
+    - jobs.command.*
+    - jobs.use
+    - liteboard.see.world.yml
+    - liteboard.seetab
+    - lockette.user.crate.chest
+    - lockette.user.create.brewingstand
+    - lockette.user.create.custom
+    - lockette.user.create.dispenser
+    - lockette.user.create.door
+    - lockette.user.create.dropper
+    - lockette.user.create.furnace
+    - lockette.user.create.trapdoor
+    - lottery.buy
+    - lottery.gui
+    - lottery.Status
+    - moneypouch.shop
+    - plotme.limit.1
+    - plotme.use
+    - plotme.use.add
+    - plotme.use.auto
+    - plotme.use.buy
+    - plotme.use.claim
+    - plotme.use.dispose
+    - plotme.use.done
+    - plotme.use.home
+    - plotme.use.remove
+    - plotme.use.sell
+    - rankup.rankup
+    - safetrade.accept
+    - safetrade.deny
+    - safetrade.request
+    - some.permission
+    inheritance: []
+    info:
+      build: true
+      prefix: ''
+      suffix: ''
+  Usta:
+    default: false
+    permissions:
+    - essentials.kits.usta
+    - essentials.sethome.multiple.usta
+    - nte.usta
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&3Usta&8] &3'
+      suffix: ''
+  Emekli:
+    default: false
+    permissions:
+    - essentials.kits.emekli
+    - essentials.sethome.multiple.emekli
+    - nte.emekli
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&1Emekli&8] &3'
+      suffix: ''
+  Mimar:
+    default: false
+    permissions:
+    - chatmanagerx.bypass.cooldown
+    - chatmanagerx.bypass.spam
+    - chatmanagerx.commands.mute
+    - donor.renk
+    - nte.mimar
+    - sohbet.admin
+    - staffchat.use
+    - worldedit.*
+    - worldguard.*
+    inheritance:
+    - tumyetkiler
+    info:
+      build: true
+      prefix: '&8[&e&lMimar&8] &3'
+      suffix: ''
+  Efsanevi:
+    default: false
+    permissions:
+    - essentials.kits.efsanevi
+    - essentials.sethome.multiple.efsanevi
+    - nte.efsanevi
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&9Efsanevi&8] &3'
+      suffix: ''
+  Moderator:
+    default: false
+    permissions:
+    - ab.ban.perm
+    - ab.ban.temp
+    - ab.ban.undo
+    - ab.kick.use
+    - ab.mute.perma
+    - ab.mute.temp
+    - ab.mute.undo
+    - cezaver.yetkili
+    - chatmanagerx.bypass.cooldown
+    - chatmanagerx.bypass.spam
+    - chatmanagerx.commands.mute
+    - donor.renk
+    - essentials.*
+    - nte.moderator
+    - sohbet.admin
+    - staffchat.use
+    - worldedit.*
+    - worldguard.*
+    inheritance:
+    - tumyetkiler
+    info:
+      build: true
+      prefix: '&8[&6Moderatör&8] &3'
+      suffix: ''
+  Kral:
+    default: false
+    permissions:
+    - essentials.kits.kral
+    - essentials.sethome.multiple.kral
+    - nte.kral
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&9Kral&8] &3'
+      suffix: ''
+  Çırak:
+    default: false
+    permissions:
+    - essentials.kits.çırak
+    - essentials.sethome.multiple.çırak
+    - nte.çırak
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&bÇırak&8] &3'
+      suffix: ''
+  Uzman:
+    default: false
+    permissions:
+    - essentials.kits.uzman
+    - essentials.sethome.multiple.uzman
+    - nte.uzman
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&3Uzman&8] &3'
+      suffix: ''
+  Rehber:
+    default: false
+    permissions:
+    - ab.mute.perma
+    - ab.mute.temp
+    - ab.mute.undo
+    - cezaver.yetkili
+    - chatmanagerx.bypass.cooldown
+    - chatmanagerx.bypass.spam
+    - chatmanagerx.commands.mute
+    - donor.renk
+    - essentials.afk
+    - essentials.feed
+    - essentials.feed.cooldown.bypass
+    - essentials.hat
+    - essentials.kits.rehber
+    - nte.rehber
+    - sohbet.admin
+    - staffchat.use
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&eRehber &a'
+      suffix: ''
+  Kurucu:
+    default: false
+    permissions:
+    - '*'
+    - nte.kurucu
+    inheritance: []
+    info:
+      build: false
+      prefix: '&4&lKURUCU &f'
+      suffix: ''
+  Vezir:
+    default: false
+    permissions:
+    - essentials.kits.vezir
+    - essentials.sethome.multiple.vezir
+    - nte.vezir
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&9Vezir&8] &3'
+      suffix: ''
+  VIP+:
+    default: false
+    permissions:
+    - essentials.afk
+    - essentials.feed
+    - essentials.joinfullserver
+    - essentials.kits.vip+
+    - nte.vip+
+    - pixelvip.cmd.player
+    - plotme.limit.5
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&bVIP&c+ &e'
+      suffix: ''
+  Asil:
+    default: false
+    permissions:
+    - essentials.kits.asil
+    - essentials.sethome.multiple.asil
+    - nte.asil
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&3Asil&8] &3'
+      suffix: ''
+  Imparator:
+    default: false
+    permissions:
+    - essentials.kits.imparator
+    - essentials.sethome.multiple.imparator
+    - nte.imparator
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&1Imparator&8] &3'
+      suffix: ''
+  Admin:
+    default: false
+    permissions:
+    - '*'
+    - ab.ban.perm
+    - ab.ban.temp
+    - ab.ban.undo
+    - ab.kick.use
+    - ab.mute.perma
+    - ab.mute.temp
+    - ab.mute.undo
+    - essentials.*
+    - nte.admin
+    - worldedit.*
+    - worldguard.*
+    inheritance: []
+    info:
+      build: false
+      prefix: '&c&lADMIN &4'
+      suffix: ''
+  MVIP:
+    default: false
+    permissions:
+    - vip.renk
+    - essentials.afk
+    - essentials.feed
+    - essentials.hat
+    - essentials.joinfullserver
+    - essentials.kits.mvip
+    - essentials.repair
+    - essentials.repair.all
+    - essentials.teleport.timer.bypass
+    - nte.mvip
+    - pixelvip.cmd.player
+    - plotme.limit.6
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&6MVIP &e'
+      suffix: ''
+  YouTuber:
+    default: false
+    permissions:
+    - donor.renk
+    - essentials.afk
+    - essentials.feed
+    - essentials.hat
+    - essentials.heal
+    - essentials.kits.youtuber
+    - essentials.repair
+    - essentials.repair.all
+    - nte.youtuber
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&4You&fTuber &c'
+      suffix: ''
+  Profesyonel:
+    default: false
+    permissions:
+    - essentials.kits.profesyonel
+    - essentials.sethome.multiple.profesyonel
+    - nte.profesyonel
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&1Profesyonel&8] &3'
+      suffix: ''
+  Kahraman:
+    default: false
+    permissions:
+    - essentials.kits.kahraman
+    - essentials.sethome.multiple.kahraman
+    - nte.kahraman
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&3Kahraman&8] &3'
+      suffix: ''
+  Oyuncu:
+    default: false
+    permissions:
+    - essentials.kits.oyuncu
+    - essentials.sethome.multiple.oyuncu
+    - nte.oyuncu
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&bOyuncu&8] &3'
+      suffix: ''
+  VIP:
+    default: false
+    permissions:
+    - essentials.afk
+    - essentials.feed
+    - essentials.hat
+    - essentials.joinfullserver
+    - essentials.kits.vip
+    - essentials.repair
+    - essentials.repair.all
+    - essentials.teleport.timer.bypass
+    - nte.vip
+    - pixelvip.cmd.player
+    - plotme.limit.4
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&bVIP &e'
+      suffix: ''
+  Acemi:
+    default: true
+    permissions:
+    - essentials.kits.acemi
+    - essentials.sethome.multiple.acemi
+    - nte.Acemi
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&bAcemi&8] &3'
+      suffix: ''
+  MVIP+:
+    default: false
+    permissions:
+    - vip.renk
+    - essentials.afk
+    - essentials.feed
+    - essentials.feed.cooldown.bypass
+    - essentials.hat
+    - essentials.kits.mvip+
+    - nte.mvip+
+    - pixelvip.cmd.player
+    - plotme.limit.7
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&6MVIP&4+ &e'
+      suffix: ''
+  Zengin:
+    default: false
+    permissions:
+    - essentials.kits.zengin
+    - essentials.sethome.multiple.zengin
+    - nte.zengin
+    inheritance:
+    - tumyetkiler
+    info:
+      build: false
+      prefix: '&8[&1Zengin&8] &3'
+      suffix: ''

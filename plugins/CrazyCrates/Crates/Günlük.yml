@@ -1,0 +1,183 @@
+﻿Crate:
+  CrateType: CSGO
+  CrateName: '&6Günlük &fkasa'
+  StartingKeys: 0
+  InGUI: true
+  Slot: 12
+  OpeningBroadCast: false
+  BroadCast: ''
+  Item: '54'
+  Name: '&6Günlük &fkasa'
+  Lore:
+  - ''
+  PhysicalKey:
+    Name: '&6Günlük &fkasa &7anahtarı'
+    Lore:
+    - '&a&oBu anahtarı &7/warp kasa &a&oda açabilirsiniz.'
+    Item: '131'
+    Glowing: true
+  Prizes:
+    '1':
+      DisplayName: '&f64 Demir Blok '
+      DisplayItem: '42'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%8'
+      MaxRange: 100
+      Chance: 8
+      Firework: true
+      Glowing: false
+      Items:
+      - Item:42, Amount:64
+    '2':
+      DisplayName: '&664 Altın Blok '
+      DisplayItem: '41'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%8'
+      MaxRange: 100
+      Chance: 8
+      Firework: true
+      Glowing: false
+      Items:
+      - Item:41, Amount:64
+    '3':
+      DisplayName: '&b64 Elmas Blok '
+      DisplayItem: '57'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%8'
+      MaxRange: 100
+      Chance: 8
+      Firework: true
+      Glowing: false
+      Items:
+      - Item:57, Amount:64
+    '4':
+      DisplayName: '&a64 Zümrüt Blok '
+      DisplayItem: '133'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%8'
+      MaxRange: 100
+      Chance: 8
+      Firework: true
+      Glowing: false
+      Items:
+      - Item:133, Amount:64
+    '5':
+      DisplayName: '&3Koruma 2 Kafalık'
+      DisplayItem: '310'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%10'
+      DisplayEnchantments:
+        - 'PROTECTION_ENVIRONMENTAL:2'
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: false
+      Items:
+        - 'Item:310, Amount:1, Name:&3Koruma 2 Kafalık, PROTECTION_ENVIRONMENTAL:2'
+    '6':
+      DisplayName: '&3Koruma 2 Göğüslük'
+      DisplayItem: '311'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%10'
+      DisplayEnchantments:
+        - 'PROTECTION_ENVIRONMENTAL:2'
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: false
+      Items:
+        - 'Item:311, Amount:1, Name:&3Koruma 2 Göğüslük, PROTECTION_ENVIRONMENTAL:2'
+    '7':
+      DisplayName: '&3Koruma 2 Pantalon'
+      DisplayItem: '312'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%10'
+      DisplayEnchantments:
+        - 'PROTECTION_ENVIRONMENTAL:2'
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: false
+      Items:
+        - 'Item:312, Amount:1, Name:&3Koruma 2 Pantalon, PROTECTION_ENVIRONMENTAL:2'
+    '8':
+      DisplayName: '&3Koruma 2 Bot'
+      DisplayItem: '313'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%10'
+      DisplayEnchantments:
+        - 'PROTECTION_ENVIRONMENTAL:2'
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: false
+      Items:
+        - 'Item:313, Amount:1, Name:&3Koruma 2 Bot, PROTECTION_ENVIRONMENTAL:2'
+    '9':
+      DisplayName: '&b1 Tane Event Anahtarı '
+      DisplayItem: '131'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%5'
+      MaxRange: 100
+      Chance: 5
+      Firework: true
+      Glowing: false
+      Commands:
+        - 'crazycrate give physical event 1 %Player% '
+    '10':
+      DisplayName: '&e100K Oyun Parası '
+      DisplayItem: '371'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%4'
+      MaxRange: 100
+      Chance: 4
+      Firework: true
+      Glowing: false
+      Commands:
+        - 'eco give %Player% 100000 '
+    '11':
+      DisplayName: '&e500K Oyun Parası '
+      DisplayItem: '371'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%3'
+      MaxRange: 100
+      Chance: 3
+      Firework: true
+      Glowing: false
+      Commands:
+        - 'eco give %Player% 500000 '
+    '12':
+      DisplayName: '&e1M Oyun Parası '
+      DisplayItem: '371'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%1'
+      MaxRange: 100
+      Chance: 1
+      Firework: true
+      Glowing: false
+      Commands:
+        - 'eco give %Player% 1000000 '

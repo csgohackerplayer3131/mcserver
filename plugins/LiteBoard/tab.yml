@@ -1,0 +1,21 @@
+#Animated TAB Footer/Header
+
+#Enable this feature?
+enable: true
+
+#Header
+header:
+  #Update Time(tick)
+  #Lower = Faster
+  time: 20
+  #Frames
+  frames:
+  - '&a&lMC&8&l-&c&lT&f&lR &6&lNETWORK%break%&f%break%&f           &6&l| &fMC-TR FACTION PLUGIN PAKETI v1.1 &6&l|%break%&f'
+
+#Footer
+footer:
+  #Update time (tick)
+  time: 20
+  #Footer Frames
+  frames:
+  - '&f%break%                       &6&l| &eVIP, Edit ve daha fazlası için sitemiz &fwww.mc-tr.com &6&l|%break%&f%break%&8&m--------------------------------------------------'

@@ -1,0 +1,129 @@
+﻿Crate:
+  CrateType: Wheel
+  CrateName: '&cOy &fkasa'
+  StartingKeys: 0
+  InGUI: true
+  Slot: 12
+  OpeningBroadCast: false
+  BroadCast: ''
+  Item: '54'
+  Name: '&cOy &fkasa'
+  Lore:
+  - ''
+  PhysicalKey:
+    Name: '&cOy &fkasa &7anahtarı'
+    Lore:
+    - '&a&oBu anahtarı &7/warp kasa &a&oda açabilirsiniz.'
+    Item: '131'
+    Glowing: true
+  Prizes:
+    '1':
+      DisplayName: '&e$100.000'
+      DisplayItem: '175'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%5'
+      DisplayEnchantments:
+        - 'unbreaking:1'
+      MaxRange: 100
+      Chance: 5
+      Firework: true
+      Glowing: false
+      Commands:
+      - eco give %Player% 100000
+    '2':
+      DisplayName: '&fDemir Blok'
+      DisplayItem: '42'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%20'
+      MaxRange: 100
+      Chance: 20
+      Firework: true
+      Glowing: false
+      Items:
+      - Item:42, Amount:64
+    '3':
+      DisplayName: '&6Altın Blok'
+      DisplayItem: '41'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%20'
+      MaxRange: 100
+      Chance: 20
+      Firework: true
+      Glowing: false
+      Items:
+      - Item:41, Amount:64
+    '4':
+      DisplayName: '&bElmas Blok'
+      DisplayItem: '57'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%20'
+      DisplayEnchantments:
+        - 'unbreaking:1'
+      MaxRange: 100
+      Chance: 20
+      Firework: true
+      Glowing: false
+      Items:
+      - Item:57, Amount:64
+    '5':
+      DisplayName: '&aZümrüt Blok'
+      DisplayItem: '133'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%20'
+      DisplayEnchantments:
+        - 'unbreaking:1'
+      MaxRange: 100
+      Chance: 20
+      Firework: true
+      Glowing: false
+      Items:
+      - Item:133, Amount:64
+    '6':
+      DisplayName: '&9Lapis Blok'
+      DisplayItem: '22'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%20'
+      MaxRange: 100
+      Chance: 20
+      Firework: true
+      Glowing: false
+      Items:
+      - Item:22, Amount:64
+    '7':
+      DisplayName: '&b1 Tane Günlük Kasa Anahtarı '
+      DisplayItem: '131'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%5'
+      MaxRange: 100
+      Chance: 5
+      Firework: true
+      Glowing: false
+      Commands:
+        - 'crazycrate give physical günlük 1 %Player% '
+    '8':
+      DisplayName: '&b1 Tane Event Kasa Anahtarı '
+      DisplayItem: '131'
+      DisplayAmount: 1
+      Lore:
+      - '&7&oKazanma Oranın'
+      - '&7&oOran: &c%7'
+      MaxRange: 100
+      Chance: 7
+      Firework: true
+      Glowing: false
+      Commands:
+        - 'crazycrate give physical event 1 %Player% '

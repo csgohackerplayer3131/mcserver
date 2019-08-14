@@ -1,0 +1,8 @@
+# 
+# Plugin made by Nighterance
+
+
+GUI-name: '&6Sihirli Su'
+VILLAGER-name: '&aSihirli Su'
+Chance: 50
+Remove-empty-bottle-on-drink: true

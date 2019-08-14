@@ -1,0 +1,55 @@
+﻿prefix: "&aMC&8-&cT&fR &8» "
+iteminfo: "&7Eşya Bilgileri: &6"
+
+ACCESS_DENIED: "&7Bunu yapmaya yetkiniz yok!"
+
+NOT_ENOUGH_MONEY: "&7Yeterli paran yok!"
+NOT_ENOUGH_MONEY_SHOP: "&7Market sahibi yeterli paraya sahip değil!"
+
+CLIENT_DEPOSIT_FAILED: "&7Hesabınıza para yatırma işlemi başarısız oldu!"
+SHOP_DEPOSIT_FAILED: "&7Market sahibine para yatırma işlemi başarısız oldu!"
+NO_ECONOMY_ACCOUNT: "&7Market sahibinin ekonomi hesabı mevcut değil!"
+
+NO_BUYING_HERE: "&7Burada satın alamazsın!"
+NO_SELLING_HERE: "&7Burada satamazsın!"
+
+NOT_ENOUGH_SPACE_IN_INVENTORY: "&7Envanterinizde yeterli alan yok!"
+NOT_ENOUGH_SPACE_IN_CHEST: "There isn't enough space in chest!"
+NOT_ENOUGH_ITEMS_TO_SELL: "&7Satmak için yeterli eşya yok!"
+NOT_ENOUGH_SPACE_IN_YOUR_SHOP: "%material&7 shop at &r%world/%x/%y/%z&7 is full! (%seller tried to sell)"
+
+NOT_ENOUGH_STOCK: "&7Makette ürün kalmamış."
+NOT_ENOUGH_STOCK_IN_YOUR_SHOP: "&e%material &7marketiniz tükenmiş."
+
+YOU_BOUGHT_FROM_SHOP: "&e%item &7alıp, &e%price &7ödeme yaptınız."
+SOMEBODY_BOUGHT_FROM_YOUR_SHOP: "&e%buyer &7sizden &e%item &7aldı, &e%price &7ödeme yaptı."
+
+YOU_SOLD_TO_SHOP: "&e%item &7sattınız, &e%price &7hesabınıza eklendi."
+SOMEBODY_SOLD_TO_YOUR_SHOP: "%seller sold %item for %price to you."
+
+YOU_CANNOT_CREATE_SHOP: "&7Bu tür bir dükkan oluşturamazsınız!"
+NO_CHEST_DETECTED: "&7Sandık bulunamadı!"
+INVALID_SHOP_DETECTED: "&7Bu market kullanılamaz!"
+CANNOT_ACCESS_THE_CHEST: "&7Bu sandığa erişme izniniz yok!"
+
+CLICK_TO_AUTOFILL_ITEM: "&7Bu marketin bulunduğu öğeyle ilgili işareti tıklayın!"
+NO_ITEM_IN_HAND: "&7Otomatik doldurmak için elinizde bir öğe yok!"
+
+PROTECTED_SHOP: "&7Marketi LWC ile başarıyla koruma altına aldı!"
+SHOP_CREATED: "&7Market oluşturuldu!"
+SHOP_FEE_PAID: "&7Sen suçlandın &e%amount"
+SHOP_REFUNDED: "&e%amount &7geri ödeme kazandınız."
+ITEM_GIVEN: "&e%item &7eşyası &e%player &7adlı oyuncuya verildi."
+
+RESTRICTED_SIGN_CREATED: "&7Tabela oluşturuldu!"
+
+PLAYER_NOT_FOUND: "&7Oyuncu bulunamadı!"
+NO_PERMISSION: "&7Bunu yapmak için izinin yok!"
+INCORRECT_ITEM_ID: "&7Yanlış eşya kodu girdiniz!"
+NOT_ENOUGH_PROTECTIONS: "&7Koruma oluşturulamadı!"
+
+CANNOT_CREATE_SHOP_HERE: "&7Burada market oluşturamazsın!"
+
+TOGGLE_MESSAGES_OFF: "&7Artık marketlerden mesaj almayacaksınız."
+TOGGLE_MESSAGES_ON: "&7Artık marketlerden mesaj alacaksınız."
+

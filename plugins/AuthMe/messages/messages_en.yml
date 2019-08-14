@@ -1,0 +1,106 @@
+# Registration
+reg_msg: '&aMC&8-&cT&fR &8» &7Lütfen kayıt olun &e/register şifre şifre'
+usage_reg: '&aMC&8-&cT&fR &8» &7Kullanım: &e/register şifre şifre'
+reg_only: '&8» &7Sunucuya girmek için siteden kayıt olmalısın. Sitemiz: &ewww.mc-tr.com'
+kicked_admin_registered: '&aMC&8-&cT&fR &8» &7Bir yetkili seni kayıt etti, tekrar giriş yap.'
+registered: '&aMC&8-&cT&fR &8» &7Başarıyla kayıt oldun.'
+reg_disabled: '&aMC&8-&cT&fR &8» &7Oyun içinden kayıt olma kapandı.'
+user_regged: '&aMC&8-&cT&fR &8» &7Zaten kayıt olunmuş.'
+
+# Password errors on registration
+password_error: '&aMC&8-&cT&fR &8» &7Yanlış şifre, tekrar deneyin.'
+password_error_nick: '&aMC&8-&cT&fR &8» &7Şifrene adınızı koyamazsın, başka bir şifre düşün.'
+password_error_unsafe: '&aMC&8-&cT&fR &8» &7Şifren güvenli değil, başka bir şifre düşün.'
+password_error_chars: '&aMC&8-&cT&fR &8» &7Şifrende izin verilmeyen karakterler bulunmakta.'
+pass_len: '&aMC&8-&cT&fR &8» &7Şifren ya çok kısa, yada çok uzun.'
+
+# Login
+usage_log: '&aMC&8-&cT&fR &8» &7Kullanım: &e/login şifre'
+wrong_pwd: '&aMC&8-&cT&fR &8» &7Yanlış şifre, tekrar deneyin.'
+login: '&aMC&8-&cT&fR &8» &7Başarıyla giriş yaptın.'
+login_msg:  '&aMC&8-&cT&fR &8» &7Lütfen giriş yapın &e/login şifre'
+timeout: '&8» &7Zamanında giriş yapamadın.'
+
+# Errors
+unknown_user: '&aMC&8-&cT&fR &8» &7Bu oyuncu kayıtlı değil.'
+denied_command: '&aMC&8-&cT&fR &8» &7Komut kullanamazsın.'
+denied_chat: '&aMC&8-&cT&fR &8» &7Sohbet edemezsin.'
+not_logged_in: '&aMC&8-&cT&fR &8» &7Giriş yapmadın.'
+tempban_max_logins: '&aMC&8-&cT&fR &8» &7Birçok kez yanlış şifre girdiğiniz için geçici banlandınız.'
+max_reg: '&aMC&8-&cT&fR &8» &7Ayni IP üzerinden maksimum kayıta ulaştınız.'
+no_perm: '&aMC&8-&cT&fR &8» &7Yetkin yok.'
+error: '&aMC&8-&cT&fR &8» &7Bir hata gerçekleşti. Yetkili ile iletişime geçin.'
+kick_forvip: '&8» &7Bir VIP oyuna giriş yaptığı için atıldın.'
+
+# AntiBot
+kick_antibot: '&aMC&8-&cT&fR &8» &7AntiBot koruma modu aktif! Birkaç dakika sonra tekrar girmeyi deneyin.'
+antibot_auto_enabled: '&aMC&8-&cT&fR &8» &7Saldırı olduğu için AntiBot aktif edildi!'
+antibot_auto_disabled: '&aMC&8-&cT&fR &8» &7AntiBot,&6 %m &7dakika sonra otomotik kapanacaktır!'
+
+# Other messages
+unregistered: '&aMC&8-&cT&fR &8» &7Başarıyla kayıt silindi!'
+accounts_owned_self: 'Sen %count hesaba sahipsin:'
+accounts_owned_other: 'Oyuncu %name %count hesaba sahip:'
+two_factor_create: '&2Your secret code is %code. You can scan it from here %url'
+recovery_code_sent: 'A recovery code to reset your password has been sent to your email.'
+recovery_code_incorrect: 'The recovery code is not correct! You have %count tries remaining.'
+recovery_tries_exceeded: 'You have exceeded the maximum number attempts to enter the recovery code. Use "/email recovery [email]" to generate a new one.'
+recovery_code_correct: 'Recovery code entered correctly!'
+recovery_change_password: 'Please use the command /email setpassword <new password> to change your password immediately.'
+vb_nonActiv: '&cYour account isn''t activated yet, please check your emails!'
+usage_unreg: '&cKullanımı: /unregister <password>'
+pwd_changed: '&2Password changed successfully!'
+logged_in: '&aMC&8-&cT&fR &8» &7Zaten giriş yaptın!'
+logout: '&2Logged out successfully!'
+reload: '&2Authme Yenilendi'
+usage_changepassword: '&aMC&8-&cT&fR &8» &7Kullanım: &e/changepassword eskişifre yenişifre'
+
+# Session messages
+invalid_session: '&aMC&8-&cT&fR &8» &7IP adresin değiştirildi ve oturum süren doldu!'
+valid_session: '&aMC&8-&cT&fR &8» &7Oturuma girişiniz otomatikmen yapılmıştır.'
+
+# Error messages when joining
+name_len: '&aMC&8-&cT&fR &8» &7Senin ismin ya çok kısa yada çok uzun!'
+regex: '&4Your username contains illegal characters. Allowed chars: REG_EX'
+country_banned: '&aMC&8-&cT&fR &8» &7Senin yaşadığın ülkeden bu sunucuya girişler yasaktır!'
+not_owner_error: '&aMC&8-&cT&fR &8» &7Bu hesabın sahibi değilsin. Lütfen farklı bir isim seç!'
+kick_fullserver: '&aMC&8-&cT&fR &8» &7Sunucu şuan dolu sonra tekrar deneyin!'
+same_nick: '&aMC&8-&cT&fR &8» &7Böyle bir isimde bir oyuncu zaten oyunda!'
+invalid_name_case: '&aMC&8-&cT&fR &8» &7Oyuna &e%valid &7isminde katılmalısın.'
+same_ip_online: 'Oyunda sizin ipnizden giren biri bulunmakta!'
+
+# Email
+usage_email_add: '&cUsage: /email add <email> <confirmEmail>'
+usage_email_change: '&cUsage: /email change <oldEmail> <newEmail>'
+usage_email_recovery: '&cUsage: /email recovery <Email>'
+new_email_invalid: '&cInvalid new email, try again!'
+old_email_invalid: '&cInvalid old email, try again!'
+email_invalid: '&cInvalid email address, try again!'
+email_added: '&2Email address successfully added to your account!'
+email_confirm: '&cPlease confirm your email address!'
+email_changed: '&2Email address changed correctly!'
+email_send: '&2Recovery email sent successfully! Please check your email inbox!'
+email_show: '&2Your current email address is: &f%email'
+incomplete_email_settings: 'Error: not all required settings are set for sending emails. Please contact an admin.'
+email_already_used: '&4The email address is already being used'
+email_send_failure: 'The email could not be sent. Please contact an administrator.'
+show_no_email: '&2You currently don''t have email address associated with this account.'
+add_email: '&3Please add your email to your account with the command: /email add <yourEmail> <confirmEmail>'
+recovery_email: '&3Forgot your password? Please use the command: /email recovery <yourEmail>'
+change_password_expired: 'You cannot change your password using this command anymore.'
+email_cooldown_error: '&cAn email was already sent recently. You must wait %time before you can send a new one.'
+
+# Captcha
+usage_captcha: '&3To login you have to solve a captcha code, please use the command: /captcha <theCaptcha>'
+wrong_captcha: '&cWrong captcha, please type "/captcha THE_CAPTCHA" into the chat!'
+valid_captcha: '&2Captcha code solved correctly!'
+
+# Time units
+second: 'saniye'
+seconds: 'saniye'
+minute: 'dakika'
+minutes: 'dakika'
+hour: 'saat'
+hours: 'saat'
+day: 'gün'
+days: 'gün'

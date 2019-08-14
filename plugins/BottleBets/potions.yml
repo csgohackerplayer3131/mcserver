@@ -1,0 +1,75 @@
+# File for potion information
+# Made for BottleBets
+
+Potion1:
+  Displayname: '&eDilenci'
+  Price: 1000
+  lore:
+  - '&6Fiyat: &7%Price%&6 TL'
+  - '&7Sihirli suyu iç'
+  - '&7Verdiğin paranın &62 &7katını kazan'
+  Broadcast: false
+Potion2:
+  Displayname: '&eFukara'
+  Price: 5000
+  lore:
+  - '&6Fiyat: &7%Price%&6 TL'
+  - '&7Sihirli suyu iç'
+  - '&7Verdiğin paranın &62 &7katını kazan'
+  Broadcast: false
+Potion3:
+  Displayname: '&eFakir'
+  Price: 10000
+  lore:
+  - '&6Fiyat: &7%Price%&6 TL'
+  - '&7Sihirli suyu iç'
+  - '&7Verdiğin paranın &62 &7katını kazan'
+  Broadcast: false
+Potion4:
+  Displayname: '&eYoksul'
+  Price: 12000
+  lore:
+  - '&6Fiyat: &7%Price%&6 TL'
+  - '&7Sihirli suyu iç'
+  - '&7Verdiğin paranın &62 &7katını kazan'
+  Broadcast: false
+Potion5:
+  Displayname: '&eOrta Tutar'
+  Price: 15000
+  lore:
+  - '&6Fiyat: &7%Price%&6 TL'
+  - '&7Sihirli suyu iç'
+  - '&7Verdiğin paranın &62 &7katını kazan'
+  Broadcast: false
+Potion6:
+  Displayname: '&eVarsıl'
+  Price: 20000
+  lore:
+  - '&6Fiyat: &7%Price%&6 TL'
+  - '&7Sihirli suyu iç'
+  - '&7Verdiğin paranın &62 &7katını kazan'
+  Broadcast: false
+Potion7:
+  Displayname: '&eTutarsız'
+  Price: 25000
+  lore:
+  - '&6Fiyat: &7%Price%&6 TL'
+  - '&7Sihirli suyu iç'
+  - '&7Verdiğin paranın &62 &7katını kazan'
+  Broadcast: false
+Potion8:
+  Displayname: '&eVarlıklı'
+  Price: 30000
+  lore:
+  - '&6Fiyat: &7%Price%&6 TL'
+  - '&7Sihirli suyu iç'
+  - '&7Verdiğin paranın &62 &7katını kazan'
+  Broadcast: false
+Potion9:
+  Displayname: '&4Milyoner'
+  Price: 60000
+  lore:
+  - '&6Fiyat: &7%Price%&6 TL'
+  - '&aŞanslıysan paranı 2 katına çıkarabilirsiniz.'
+  - '&cUYARI &7Bunu içip tüm paranı kaybedebilirsiniz.'
+  Broadcast: false
